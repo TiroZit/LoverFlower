@@ -1,0 +1,24 @@
+extends _html/_base
+include _html/_mixins
+block vars
+	- var lang = ''
+	- var type = ''
+	- var title = ''
+	- var description = ''
+	- var siteName = ''
+	- var keywords = ''
+	- var url = ''
+	- var imageLogo = ''
+	- var typeImage = 'image/webp'
+	- var widthImage = '400'
+	- var heightImage = '300'
+	- var favicon = 'img/favicons/favicon.webp'
+	- var font = 'fonts/.woff2'
+	- var light = ''
+	- var dark = ''
+block content
+	.wrapper
+		include _html/_header
+		main.page
+		include _html/_footer
+	script(src="js/app.min.js")
