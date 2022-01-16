@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 :root {
   --colorBlack: #040A0A;
   --colorBlackRGB: rgba(0, 0, 0, 0.2);
@@ -13,7 +14,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -92,7 +94,8 @@ address {
 
 .lock body {
   overflow: hidden;
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .js-focus-visible :focus-visible {
@@ -105,13 +108,22 @@ address {
 
 .wrapper {
   min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
 }
+
 .wrapper > main {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
+
 .wrapper > * {
   min-width: 0;
 }
@@ -122,9 +134,11 @@ address {
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
 */
+
 [class*=__container] {
   max-width: 69.375rem;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   margin: 0 auto;
   padding: 0 0.625rem;
 }
@@ -132,17 +146,20 @@ address {
 [class*=-ibg] {
   position: relative;
 }
+
 [class*=-ibg] img {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 [class*=-ibg_contain] img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /*
@@ -191,3 +208,7 @@ address {
 	}
 }
 */
+
+.page {
+  background: url(`@img/favicons/favicon.png`) 0 0 no-repeat;
+}          .webp .page {            background: url(`@img/favicons/favicon.webp`) 0 0 no-repeat          }                  .avif .page {            background: url(`@img/favicons/favicon.avif`) 0 0 no-repeat          }        

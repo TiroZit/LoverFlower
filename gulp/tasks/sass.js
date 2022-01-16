@@ -3,7 +3,7 @@ import gulpSass from 'gulp-sass';
 import bulkSass from 'gulp-sass-bulk-importer';// @import components/* for SASS
 import rename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css';// Сжатие
-import webpcss from 'gulp-webpcss';// Вывод webp изображений
+import webpcss from 'gulp-avif-css';// Вывод webp изображений
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';// Группировка медиа запросов
 
@@ -32,10 +32,7 @@ export const sass = () => {
     .pipe(
       app.plugins.if(
         app.isBuild,
-        webpcss({
-          webpClass: '.webp',
-          noWebpClass: '.no-webp'
-        })
+        webpcss()
       )
     )
     .pipe(
