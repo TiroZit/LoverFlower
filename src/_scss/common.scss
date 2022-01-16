@@ -1,1 +1,25 @@
 // Заголовки, общие БЄМ блоки и проче...
+a{
+  transition: all 0.3s ease 0s;
+}
+.logo{
+  position: relative;
+  display: block;
+  flex: 0 0 34px;
+  height: 60px;
+  font-family: var(--ffamilyCormorant);
+  font-weight: 300;
+  text-transform: uppercase;
+  &__f{
+    position: absolute;
+  }
+  &__l{
+    font-size: rem(60);
+    color: #8A8686;
+  }
+  &__f{
+    left: calc(50% - rem(10));
+    top: calc(50% - rem(17));
+    font-size: rem(50);
+  }
+}

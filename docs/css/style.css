@@ -1,5 +1,45 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: Cormorant;
+  font-display: swap;
+  src: url("../fonts/Cormorant-Light.woff2") format("woff2"), url("../fonts/Cormorant-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Cormorant;
+  font-display: swap;
+  src: url("../fonts/Cormorant-Regular.woff2") format("woff2"), url("../fonts/Cormorant-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --colorBlack: #040A0A;
   --colorBlackRGB: rgba(0, 0, 0, 0.2);
@@ -9,6 +49,8 @@
   --colorSkyMagenta: #CC6699;
   --borderRadius: 20px;
   --blur: 20px;
+  --ffamilyCormorant: "Oswald", sans-serif;
+  --ffamilyCormorant: "Cormorant", sans-serif;
 }
 
 *,
@@ -92,6 +134,10 @@ address {
   font-style: unset;
 }
 
+body {
+  letter-spacing: 0.04em;
+}
+
 .lock body {
   overflow: hidden;
   -ms-touch-action: none;
@@ -162,6 +208,124 @@ address {
      object-fit: contain;
 }
 
+a {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.logo {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 34px;
+          flex: 0 0 34px;
+  height: 60px;
+  font-family: var(--ffamilyCormorant);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.logo__f {
+  position: absolute;
+}
+
+.logo__l {
+  font-size: 3.75rem;
+  color: #8A8686;
+}
+
+.logo__f {
+  left: calc(50% - 0.625rem);
+  top: calc(50% - 1.0625rem);
+  font-size: 3.125rem;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  margin-right: 30px;
+}
+
+.header__search {
+  margin-left: 10px;
+}
+
+.menu {
+  margin: 0 10px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.menu__link {
+  border-bottom: 1px solid transparent;
+}
+
+.menu__link:hover {
+  color: var(--colorTurquoise);
+  border-bottom: 1px solid var(--colorTurquoise);
+}
+
+.search-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-header__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-header__input {
+  margin-left: 0.7142857143em;
+  background-color: transparent;
+}
+
+.search-header__input::-webkit-input-placeholder {
+  letter-spacing: 0.02em;
+}
+
+.search-header__input::-moz-placeholder {
+  letter-spacing: 0.02em;
+}
+
+.search-header__input:-ms-input-placeholder {
+  letter-spacing: 0.02em;
+}
+
+.search-header__input::-ms-input-placeholder {
+  letter-spacing: 0.02em;
+}
+
+.search-header__input::placeholder {
+  letter-spacing: 0.02em;
+}
+
 /*
 .icon-menu {
 	display: none;
@@ -208,7 +372,3 @@ address {
 	}
 }
 */
-
-.page {
-  background: url(`@img/favicons/favicon.png`) 0 0 no-repeat;
-}          .webp .page {            background: url(`@img/favicons/favicon.webp`) 0 0 no-repeat          }                  .avif .page {            background: url(`@img/favicons/favicon.avif`) 0 0 no-repeat          }        
