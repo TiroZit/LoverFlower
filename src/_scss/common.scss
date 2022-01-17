@@ -5,8 +5,8 @@ a{
 .logo{
   position: relative;
   display: block;
-  flex: 0 0 34px;
-  height: 60px;
+  flex: 0 0 rem(34);
+  height: rem(60);
   font-family: var(--ffamilyCormorant);
   font-weight: 300;
   text-transform: uppercase;
@@ -18,8 +18,8 @@ a{
     color: #8A8686;
   }
   &__f{
-    left: calc(50% - rem(10));
-    top: calc(50% - rem(17));
+    left: percent(8, 34);
+    top: percent(15, 60);
     font-size: rem(50);
   }
 }

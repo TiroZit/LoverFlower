@@ -1,22 +1,91 @@
 .header{
+	padding: 10px 0;
+	line-height: math.div(21, 14);
 	&__container{
 		display: flex;
 		align-items: center;
-		gap: 50px;
+		@include adaptiveValue("gap", 50, 30, $containerWidth, 992);
 		text-transform: uppercase;
+		@media(max-width: $tablet){
+			position: relative;
+			gap: rem(30);
+		}
 	}
 	&__logo{
+		margin-top: -10px;
 		margin-right: 30px;
+		line-height: 1;
+		@media(max-width: $tablet){
+			margin-right: auto;
+			&.logo{
+				width: rem(25);
+				height: rem(45);
+			}
+			& .logo__l{
+				font-size: rem(40);
+			}
+			& .logo__f{
+				font-size: rem(30);
+			}
+		}
+			
+	}
+	&__menu{
+		@media(max-width: $tablet){
+			position: absolute;
+			transform: translateX(-105%);
+			top: -10px;
+			height: 100vh;
+			z-index: 5;
+			padding: 12px;
+			min-width: rem(259);
+			overflow: auto;
+			transition: all 0.5s ease 0s;
+			background-color: #000;
+		}
 	}
 	&__search{
-		margin-left: 10px;
+		flex: 1 1 auto;
+	}
+	&__phone{
+		flex: 0 0 auto;
+		&>.phone2{
+			margin: 0 em(10,14) 0 0;
+		}
+	}
+	&__cart{
+		margin-right: 9px;
 	}
 }
+.menu-open .header__menu{
+	left: 0;
+	transform: translateX(0);
+}
 .menu{
-	margin: 0 10px;
+	flex: 0 0 auto;
 	&__list{
 		display: flex;
-		gap: 50px;
+		flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 50, 30, $containerWidth, 992);
+		row-gap: 5px;
+		@media(max-width: $tablet){
+			flex-direction: column;
+			row-gap: rem(10);
+			&::after{
+				content:'';
+				width: rem(100);
+				height: rem(1);
+				background-color: #555555;
+			}
+		}
+	}
+	&__item{
+		&_client{
+			display: none;
+			@media(max-width: $tablet){
+				display: block;
+			}
+		}
 	}
 	&__link{
 		border-bottom: 1px solid transparent;
@@ -28,42 +97,91 @@
 }
 .search-header{
 	display: flex;
+	position: relative;
 	align-items: center;
 	&__btn{
+		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 5px;
+		margin-left: -5px;
 	}
 	&__input{
-		margin-left: em(10,14);
+		flex-grow: 1;
+		padding: 3px 0 3px 30px;
 		background-color: transparent;
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s ease 0s;
+		caret-color: #006BA9;
+		text-transform: uppercase;
+		&.focus-visible{
+			outline: none;
+			border-bottom: 1px solid #555555;
+		}
 		&::placeholder{
+			text-transform: none;
 			letter-spacing: 0.02em;
+		}
+		&::-webkit-search-cancel-button{
+			appearance: none;
+			cursor: pointer;
+			width: rem(20);
+			height: rem(20);
+			background: url('../img/close.svg') no-repeat 50% 50%;
 		}
 	}
 }
-
+.phone{
+	display: flex;
+	align-items: center;
+	color: var(--colorTurquoise);
+}
+.cart-btn{
+	position: relative;
+	&::after{
+		content:'5';
+		position: absolute;
+		top: -5px;
+		right: -9px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: var(--colorBlack);
+		font-size: rem(12);
+		width: rem(16);
+		height: rem(16);
+		border-radius: 50%;
+		background-color: var(--colorTurquoise);
+	}
+}
 //Burger
-/*
-.icon-menu {
+.menu-open .burger{
+	transform: translateX(200px);
+	z-index: 6;
+}
+.burger {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: 30px;
 		height: 18px;
+		transition: all 0.5s ease 0s;
+		transform: translateX(0);
 		cursor: pointer;
 		z-index: 5;
+		margin-right: auto;
 		span,
 		&::before,
 		&::after {
 			content: "";
-			transition: all 0.3s ease 0s;
+			transition: all 0.7s ease 0s;
 			left: 0px;
 			position: absolute;
 			width: 100%;
-			height: 2px;
-			background-color: #000;
+			height: 1px;
+			background-color: var(--colorTurquoise);
 		}
 		&::before {
 			top: 0px;
@@ -80,7 +198,7 @@
 			}
 			&::before {
 				transform: rotate(-45deg);
-				top: calc(50% - 1px);
+				top: calc(50% - 0.5px);
 			}
 			&::after {
 				transform: rotate(45deg);
@@ -89,4 +207,3 @@
 		}
 	}
 }
-*/

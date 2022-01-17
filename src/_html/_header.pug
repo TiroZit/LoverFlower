@@ -1,6 +1,8 @@
 header.header
   .header__container 
-    a.header__logo.logo(href="#")
+    button.burger(type="button")
+      span
+    a.header__logo.logo(href="#" data-da=".header__menu,992,first")
       span.logo__l l
       span.logo__f f
     nav.header__menu.menu
@@ -15,8 +17,15 @@ header.header
           a.menu__link(href='#') Контакты
         li.menu__item
           a.menu__link(href='#') FAQ
-    .header__search
+        li.menu__item.menu__item_client
+          a.menu__link(href='#') для корпартивных клиентов
+    .header__search(data-da=".header__menu,992,0")
       form.search-header(action="#")
         button.search-header__btn(type="submit")
           +svg('search', '18', '18', 'currentColor', 'none')
         input.search-header__input(type="search" placeholder='Введите свой запрос')
+    a.header__phone.phone(href="tel:+375291136969")
+      +svg('phone2', '18', '18', 'currentColor', 'none')
+      |+375 (29) 113-69-69
+    button.header__cart.cart-btn(type="button")
+      +svg('cart', '25', '22', 'currentColor', 'none')

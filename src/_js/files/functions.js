@@ -412,7 +412,7 @@ export function tabs() {
 }
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 export function menuInit() {
-	let iconMenu = document.querySelector(".icon-menu");
+	let iconMenu = document.querySelector(".burger");
 	if (iconMenu) {
 		iconMenu.addEventListener("click", function (e) {
 			if (bodyLockStatus) {
