@@ -1,4 +1,4 @@
 //- +svg('', '', '', 'currentColor')
 mixin svg(name, width, height, fill, stroke)
-  svg(class=name, style=`width: ${width}px; height: ${height}px; fill: ${fill}; stroke: ${stroke};`) 
+  svg(class=name, style=`width: ${width/16}rem; height: ${height/16}rem; fill: ${fill}; stroke: ${stroke};`) 
     use(xlink:href=`img/icons/icons.svg#svg-${name}`)
