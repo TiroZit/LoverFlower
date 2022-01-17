@@ -2,7 +2,7 @@ header.header
   .header__container 
     button.burger(type="button")
       span
-    a.header__logo.logo(href="home.html" data-da=".header__menu,992,first")
+    a.header__logo.logo(href="home.html" data-da=`.header__menu,${992/16},first`)
       span.logo__l l
       span.logo__f f
     nav.header__menu.menu
@@ -19,7 +19,7 @@ header.header
           a.menu__link(href='#') FAQ
         li.menu__item.menu__item_client
           a.menu__link(href='#') для корпартивных клиентов
-    .header__search(data-da=".header__menu,992,0")
+    .header__search(data-da=`.header__menu,${992/16},0`)
       form.search-header(action="#")
         button.search-header__btn(type="submit")
           +svg('search', '18', '18', 'currentColor', 'none')
