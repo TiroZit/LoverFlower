@@ -1,6 +1,9 @@
 .header{
 	padding: 10px 0;
 	line-height: math.div(21, 14);
+	@media(max-width: $tablet){
+		font-size: rem(16);
+	}
 	&__container{
 		display: flex;
 		align-items: center;
@@ -18,17 +21,9 @@
 		@media(max-width: $tablet){
 			margin-right: auto;
 			&.logo{
-				width: rem(25);
-				height: rem(45);
-			}
-			& .logo__l{
-				font-size: rem(40);
-			}
-			& .logo__f{
-				font-size: rem(30);
+				width: rem(34);
 			}
 		}
-			
 	}
 	&__menu{
 		@media(max-width: $tablet){
@@ -42,10 +37,17 @@
 			overflow: auto;
 			transition: all 0.5s ease 0s;
 			background-color: #000;
+			& .menu__link{
+				display: block;
+			}
 		}
 	}
 	&__search{
 		flex: 1 1 auto;
+		@media(max-width: $tablet){
+			margin: 10px 0;
+			width: 200px;
+		}
 	}
 	&__phone{
 		flex: 0 0 auto;
@@ -70,7 +72,7 @@
 		row-gap: 5px;
 		@media(max-width: $tablet){
 			flex-direction: column;
-			row-gap: rem(10);
+			row-gap: rem(5);
 			&::after{
 				content:'';
 				width: rem(100);
@@ -80,6 +82,18 @@
 		}
 	}
 	&__item{
+		border-bottom: 1px solid transparent;
+		transition: border 0.3s ease 0s;
+		&:hover{
+			color: var(--colorTurquoise);
+			border-bottom: 1px solid var(--colorTurquoise);
+		}
+		@media(max-width: $tablet){
+			border-bottom: none;
+			&:hover{
+				border-bottom: none;
+			}
+		}
 		&_client{
 			display: none;
 			@media(max-width: $tablet){
@@ -88,11 +102,7 @@
 		}
 	}
 	&__link{
-		border-bottom: 1px solid transparent;
-		&:hover{
-			color: var(--colorTurquoise);
-			border-bottom: 1px solid var(--colorTurquoise);
-		}
+		padding: 5px 0;
 	}
 }
 .search-header{
