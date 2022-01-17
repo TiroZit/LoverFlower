@@ -2,6 +2,11 @@
 a{
   transition: all 0.3s ease 0s;
 }
+h1,h2{
+  font-family: var(--ffamilyCormorant);
+  font-weight: 300;
+  text-transform: uppercase;
+}
 .logo{
   position: relative;
   display: block;
@@ -21,5 +26,30 @@ a{
     left: percent(8, 34);
     top: percent(15, 60);
     font-size: rem(50);
+  }
+}
+.text{
+  font-size: rem(20);
+  letter-spacing: 0.02em;
+  line-height: math.div(30, 20);
+}
+.btn-turquoise{
+  font-size: rem(12);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #000;
+  background-color: var(--colorTurquoise);
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  &:hover{
+    background-color: var(--colorDarkRaspberry);
+  }
+  &.focus-visible{
+    outline: solid #7D2253;
+  }
+  &:active{
+    transition: none;
+    background-color: var(--colorDarkRaspberry);
+    box-shadow: inset 0px 0px 10px #1B000E;
   }
 }

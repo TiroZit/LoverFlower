@@ -19,8 +19,8 @@
 @font-face {
   font-family: Oswald;
   font-display: swap;
-  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -35,8 +35,8 @@
 @font-face {
   font-family: Oswald;
   font-display: swap;
-  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -174,6 +174,39 @@ body {
   min-width: 0;
 }
 
+.menu-open .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  visibility: hidden;
+}
+
+@supports ((-webkit-backdrop-filter: blur(var(--blur))) or (backdrop-filter: blur(var(--blur)))) {
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(var(--blur));
+            backdrop-filter: blur(var(--blur));
+  }
+}
+
+@supports not ((-webkit-backdrop-filter: blur(var(--blur))) or (backdrop-filter: blur(var(--blur)))) {
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
 /*
 (i) Стили будут применяться ко 
 всем классам содержащим *__container
@@ -214,6 +247,13 @@ a {
   transition: all 0.3s ease 0s;
 }
 
+h1,
+h2 {
+  font-family: var(--ffamilyCormorant);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .logo {
   position: relative;
   display: block;
@@ -241,7 +281,46 @@ a {
   font-size: 3.125rem;
 }
 
+.text {
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.btn-turquoise {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #000;
+  background-color: var(--colorTurquoise);
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-turquoise:hover {
+  background-color: var(--colorDarkRaspberry);
+}
+
+.btn-turquoise.focus-visible {
+  outline: solid #7D2253;
+}
+
+.btn-turquoise:active {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  background-color: var(--colorDarkRaspberry);
+  -webkit-box-shadow: inset 0px 0px 10px #1B000E;
+          box-shadow: inset 0px 0px 10px #1B000E;
+}
+
 .header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
   padding: 10px 0;
   line-height: 1.5;
 }
@@ -449,6 +528,72 @@ a {
   display: none;
 }
 
+.welcome {
+  position: relative;
+  min-height: 100vh;
+}
+
+.welcome::before,
+.welcome::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  -webkit-filter: blur(250px);
+          filter: blur(250px);
+}
+
+.welcome::before {
+  width: 18.6979166667%;
+  height: 15.2604166667%;
+  left: 8.3854166667%;
+  top: 19.0104166667%;
+  background: #249479;
+  -webkit-transform: rotate(41.6deg);
+      -ms-transform: rotate(41.6deg);
+          transform: rotate(41.6deg);
+}
+
+.welcome::after {
+  width: 24.5833333333%;
+  height: 10.9895833333%;
+  top: 18.6979166667%;
+  right: 10.4166666667%;
+  background: #7D2253;
+  -webkit-transform: rotate(-43.21deg);
+      -ms-transform: rotate(-43.21deg);
+          transform: rotate(-43.21deg);
+}
+
+.welcome__container {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 150px;
+  gap: 3.125rem;
+}
+
+.welcome__title {
+  letter-spacing: 0.2em;
+  line-height: 0.75;
+}
+
+.welcome__btn {
+  padding: 16px 50px;
+}
+
 @media (min-width: 70.625em) {
   .header__container {
     gap: 3.125rem;
@@ -458,6 +603,16 @@ a {
     -webkit-column-gap: 3.125rem;
        -moz-column-gap: 3.125rem;
             column-gap: 3.125rem;
+  }
+
+  .welcome__title {
+    font-size: 12.5rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .welcome__title {
+    font-size: 3.125rem;
   }
 }
 
@@ -604,5 +759,11 @@ a {
     -webkit-column-gap: clamp( 1.875rem , -7.1105072464rem  +  14.4927536232vw , 3.125rem );
        -moz-column-gap: clamp( 1.875rem , -7.1105072464rem  +  14.4927536232vw , 3.125rem );
             column-gap: clamp( 1.875rem , -7.1105072464rem  +  14.4927536232vw , 3.125rem );
+  }
+}
+
+@media (min-width: 20em) and (max-width: 70.625em) {
+  .welcome__title {
+    font-size: clamp( 3.125rem , -0.5787037037rem  +  18.5185185185vw , 12.5rem );
   }
 }

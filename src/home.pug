@@ -18,7 +18,9 @@ block vars
 	- var dark = ''
 block content
 	.wrapper
+		.overlay
 		include _html/_header
 		main.page
+			include _html/welcome
 		include _html/_footer
 	script(src="js/app.min.js")

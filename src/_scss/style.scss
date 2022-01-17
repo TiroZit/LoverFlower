@@ -97,7 +97,28 @@ body {
 		min-width: 0;
 	}
 }
-
+.menu-open .overlay{
+	opacity: 1;
+	visibility: visible;
+}
+.overlay{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 4;
+	opacity: 0;
+	transition: all 0.5s ease 0s;
+	visibility: hidden;
+	@supports(backdrop-filter: blur(var(--blur))){
+		background-color: rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(var(--blur));
+	}
+	@supports not(backdrop-filter: blur(var(--blur))){
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+}
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
 
 /*
