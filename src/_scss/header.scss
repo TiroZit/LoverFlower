@@ -7,6 +7,9 @@
 	}
 	&._header-show .header__phone{
 		display: block;
+		@media(max-width: $mobile){
+			display: none;
+		}
 	}
 	&._header-show .cart-btn{
 		display: none;

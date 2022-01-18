@@ -1023,8 +1023,12 @@ h2 {
 }
 
 @media (max-width: 47.99875em) {
+  .header._header-show .header__phone {
+    display: none;
+  }
+
   .welcome__container {
-    height: 100vh;
+    height: 85vh;
     gap: 1.25rem;
   }
 

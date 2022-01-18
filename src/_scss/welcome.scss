@@ -33,7 +33,7 @@
     @include adaptiveValue("padding-top", 150, 20);
     gap: rem(50);
     @media(max-width: $mobile){
-      height: 100vh;
+      height: 85vh;
       gap: rem(20);
     }
   }
