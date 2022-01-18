@@ -5,41 +5,187 @@
     content:'';
     position: absolute;
     z-index: 0;
-    filter: blur(250px);
+    filter: blur(100px);
   }
   &::before{
     width: percent(359, 1920);
-    height: percent(293, 1920);
+    height: percent(493, 1920);
     left: percent(161, 1920);
-    top: percent(365, 1920);
+    top: percent(665, 1920);
     background: #249479;
     transform: rotate(41.6deg);
   }
   &::after{
     width: percent(472, 1920);
     height: percent(211, 1920);
-    top: percent(359, 1920);
+    top: percent(600, 1920);
     right: percent(200, 1920);
     background: #7D2253;
     transform: rotate(-43.21deg);
   }
   &__container{
     position: relative;
-    z-index: 2;
+    z-index: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-direction: column;
-    padding-top: 150px;
+    @include adaptiveValue("padding-top", 150, 20);
     gap: rem(50);
+    @media(max-width: $mobile){
+      height: 100vh;
+      gap: rem(20);
+    }
   }
   &__title{
     @include adaptiveValue("font-size", 200, 50);
     letter-spacing: 0.2em;
     line-height: 0.75;
+    @media(max-width: $mobile){
+      flex-grow: 1;
+    }
   }
   &__btn{
     padding: 16px 50px;
   }
+  &__address{
+    &:not(:last-child) {
+      margin-bottom: em(20);
+      @media(max-width: $tablet){
+        margin-bottom: em(10);
+      }
+    }
+  }
+  &__wrapper{
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    display: flex;
+    flex-direction: column;
+    height: percent(660, 624);
+    text-align: right;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @media(max-width: $tablet){
+      position: static;
+      width: 200px;
+      height: auto;
+      text-align: left;
+      margin-top: em(20);
+    }
+    &-header{
+      @media(max-width: $tablet){
+        order: 1;
+      }
+    }
+    &-body{
+      flex: 1 0 auto;
+      @media(max-width: $tablet){
+        order: 3;
+      }
+    }
+    &-footer{
+      &:not(:last-child) {
+        margin-bottom: em(20);
+      }
+      @media(max-width: $tablet){
+        order: 2;
+      }
+    }
+  }
+  &__socials{
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    margin-top: em(80);
+    margin-left: auto;
+    width: fit-content;
+    @media(max-width: $tablet){
+      flex-direction: row;
+      margin: em(15) 0 0 0;
+      padding: 0;
+    }
+  }
+  &__wrapper-phone{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: rem(16);
+    letter-spacing: 0.1em;
+    color: var(--colorTurquoise);
+    margin-bottom: em(20);
+    @media(max-width: $tablet){
+      align-items: start;
+      margin: 0;
+    }
+  }
+  &__phone{
+    margin-bottom: em(7);
+    @media(max-width: $tablet){
+      color: var(--colorWhite);
+      text-decoration: underline !important;
+      margin: em(10) 0 0 0;
+    }
+  }
+  &__call{
+    & .phone2{
+      margin-right: em(8);
+    }
+    text-transform: uppercase;
+    padding: 12px 20px;
+    font-size: rem(14);
+    letter-spacing: 0.1em;
+    @media(max-width: $tablet){
+      display: none;
+    }
+  }
+  &__cart{
+    padding: 15px;
+    &.cart-btn{
+      &::after{
+        top: percent(10, 60);
+        right: percent(8, 64);
+      }
+    }
+    @media(max-width: $tablet){
+      padding: 0;
+      margin-right: 5px;
+      &.cart-btn{
+        &::after{
+          top: percent(-4, 30);
+          right: percent(-8, 30);
+        }
+      }
+    }
+  }
+}
+.address{
+  &__title{
+    color: var(--colorTurquoise);
+    letter-spacing: 0.1em;
+  }
+  &__sub-title{
+    font-size: rem(10);
+    font-weight: 300;
+    line-height: math.div(15, 10);
+    color: var(--colorWhite);
+    margin-top: em(8);
+  }
+}
+.socials{
+  display: flex;
+  gap: rem(20);
+  &__item{
+    display: flex;
+    color: var(--colorTurquoise);
+    transition: all .3s ease 0s;
+    &:hover{
+      color: var(--colorDarkRaspberry);
+    }
+  }
+}
+.menu-open .welcome__cart{
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease 0s;
 }

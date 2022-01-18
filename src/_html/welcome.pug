@@ -1,8 +1,39 @@
 section.welcome(style='background: url("@img/flowers-bg.jpg") center / cover no-repeat;')
   .welcome__container
     h1.welcome__title
-      |lover 
+      |lover
       br
       |flower
     p.welcome__text.text Создаём для тех, кто ценит свежесть и изящество цветка
     a.welcome__btn.btn-turquoise(href="#") смотреть Каталог
+    .welcome__wrapper(data-da=`.header__menu,${992/16},last`)
+      .welcome__wrapper-header
+        address.welcome__address.address
+          a.address__title(href='mailto:zakaz@loverflower.by') zakaz@loverflower.by
+          .address__sub-title Доставка 24/7 по договоренности с оператором
+        address.welcome__address.address 
+          .address__title ул. Тимирязева 67
+          .address__sub-title 
+            |10:00 до 21:00
+            br
+            |без выходных
+      .welcome__wrapper-body 
+        .welcome__socials.bg-blur.socials
+          a.socials__item(href="https://www.instagram.com/" target='_blank') 
+            +svg('instagram', '25', '25', 'currentColor', 'none')
+          a.socials__item(href="https://www.whatsapp.com/" target='_blank') 
+            +svg('whatsapp', '25', '25', 'currentColor', 'none')
+          a.socials__item(href="tel:+375291136969") 
+            +svg('phone-icon', '25', '25', 'currentColor', 'none')
+      .welcome__wrapper-footer 
+        .welcome__wrapper-phone 
+          .policy
+            a.policy__link(href="#" target='_blank') Политика конфиденциальности
+            a.policy__link(href="#" target='_blank') Обработка персональных данных
+          a.welcome__phone(href="tel:+375291136969") +375 (29) 113-69-69
+          button.welcome__call.bg-blur(type="button")
+            +svg('phone2', '13', '13', 'currentColor', 'none')
+            |заказать звонок
+        button.welcome__cart.bg-blur.cart-btn(type="button" data-da=`.header__container,${992/16},last`)
+          +svg('cart', '30', '30', 'currentColor', 'none')
+
