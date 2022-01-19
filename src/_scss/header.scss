@@ -120,17 +120,15 @@
 		}
 	}
 	&__item{
-		border-bottom: 1px solid transparent;
-		transition: border 0.3s ease 0s;
 		&:hover{
 			color: var(--colorTurquoise);
-			border-bottom: 1px solid var(--colorTurquoise);
 		}
-		@media(max-width: $tablet){
-			border-bottom: none;
+		@include media-breakpoint-up(tablet){
+			border-bottom: 1px solid transparent;
+			transition: border 0.3s ease 0s;	
 			&:hover{
-				border-bottom: none;
-			}
+				border-bottom: 1px solid var(--colorTurquoise);
+			}	
 		}
 		&_client{
 			display: none;
