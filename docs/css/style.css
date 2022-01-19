@@ -49,7 +49,7 @@
   --colorSkyMagenta: #CC6699;
   --borderRadius: 20px;
   --blur: 20px;
-  --ffamilyCormorant: "Oswald", sans-serif;
+  --ffamilyOswald: "Oswald", sans-serif;
   --ffamilyCormorant: "Cormorant", sans-serif;
 }
 
@@ -91,6 +91,7 @@ button,
 textarea {
   font-family: "Oswald", sans-serif;
   font-size: inherit;
+  color: inherit;
 }
 
 button {
