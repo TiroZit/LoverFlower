@@ -2,10 +2,18 @@
 a{
   transition: all 0.3s ease 0s;
 }
+h1{
+  font-weight: 300;
+}
 h1,h2{
   font-family: var(--ffamilyCormorant);
-  font-weight: 300;
   text-transform: uppercase;
+}
+h2{
+  font-size: rem(100);
+  font-weight: 400;
+  line-height: math.div(121, 100);
+  letter-spacing: 0.02em;
 }
 .menu-open .overlay{
 	opacity: 1;
@@ -97,4 +105,11 @@ h1,h2{
     text-transform: none;
     margin-top: em(10);
     }
+}
+.view-catalog{
+  font-size: rem(12);
+  line-height: math.div(18, 12);
+  letter-spacing: 0.1em;
+  text-decoration-line: underline !important;
+  color: $colorMagenta;
 }
