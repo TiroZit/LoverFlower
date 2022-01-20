@@ -38,10 +38,11 @@ export const sass = () => {
       app.plugins.if(
         app.isBuild,
         autoprefixer({
-          grid: true,
           overrideBrowserslist: ["last 3 versions"],
-          cascade: true
-        })    
+          cascade: true,
+          grid: false,
+          flexbox: false
+        })
       )
     )
     .pipe(app.gulp.dest(app.path.build.css)) // Выгрузка не сжатого
