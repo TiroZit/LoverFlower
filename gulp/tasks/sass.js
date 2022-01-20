@@ -17,12 +17,11 @@ export const sass = () => {
         message: "Error: <%= error.message %>"
       }))
     )
-    .pipe(bulkSass())
-    .pipe(app.plugins.replace(/@img\//g, '../img/'))
     .pipe(scss({
       includePaths: ['node_modules'],
       outputStyle: 'expanded'
     }))
+    .pipe(app.plugins.replace(/@img\//g, '../img/'))
     .pipe(
       app.plugins.if(
         app.isBuild,

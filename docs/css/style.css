@@ -555,7 +555,8 @@ h2 {
 .welcome {
   position: relative;
   min-height: 100vh;
-}
+  background: url("../img/flowers-bg.jpg") center/cover no-repeat;
+}          .webp .welcome {            background: url("../img/flowers-bg.webp") center/cover no-repeat          }                  .avif .welcome {            background: url("../img/flowers-bg.avif") center/cover no-repeat          }        
 
 .welcome::before,
 .welcome::after {
@@ -629,7 +630,6 @@ h2 {
           flex-direction: column;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  width: 200px;
 }
 
 .welcome__wrapper-body {
@@ -974,6 +974,10 @@ h2 {
 
   .welcome__address:not(:last-child) {
     margin-bottom: 0.625em;
+  }
+
+  .welcome__wrapper {
+    width: 200px;
   }
 
   .welcome__wrapper-header {

@@ -1,6 +1,7 @@
 .welcome{
   position: relative;
   min-height: 100vh;
+  background: url("@img/flowers-bg.jpg") center / cover no-repeat;
   &::before,&::after{
     content:'';
     position: absolute;
@@ -69,7 +70,7 @@
       height: percent(660, 624);
       text-align: right;
     }
-    @include media-breakpoint-down(table){
+    @include media-breakpoint-down(tablet){
       width: 200px;
     }
     &-header{
