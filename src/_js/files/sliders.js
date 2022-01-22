@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Lazy, Navigation } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -17,7 +17,7 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+// import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
 // import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
@@ -49,7 +49,7 @@ function initSliders() {
 		new Swiper('.swiper', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			//modules: [Navigation, Pagination],
+			modules: [Navigation, Lazy],
 			/*
 			effect: 'fade',
 			autoplay: {
@@ -57,17 +57,19 @@ function initSliders() {
 				disableOnInteraction: false,
 			},
 			*/
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 30,
+			// autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
+			// loop: true,
+			preloadImages: false,
+			lazy: {
+				loadPrevNext: true,
+			},
 			// Dotts
 			//pagination: {
 			//	el: '.slider-quality__pagging',
@@ -75,8 +77,8 @@ function initSliders() {
 			//},
 			// Arrows
 			navigation: {
-				nextEl: '.about__more .more__item_next',
-				prevEl: '.about__more .more__item_prev',
+				nextEl: '.bouquets-button-next',
+				prevEl: '.bouquets-button-prev',
 			},
 			/*
 			breakpoints: {
@@ -99,9 +101,9 @@ function initSliders() {
 				},
 			},
 			*/
-			on: {
+			// on: {
 
-			}
+			// }
 		});
 	}
 }

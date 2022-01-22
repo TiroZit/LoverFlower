@@ -12,7 +12,7 @@ h1,h2{
 h2{
   @include adaptiveValue("font-size", 100, 40);
   font-weight: 400;
-  line-height: math.div(121, 100);
+  line-height: math.div(110, 100);
   letter-spacing: 0.02em;
 }
 .menu-open .overlay{
@@ -65,6 +65,7 @@ h2{
 }
 .text{
   @include adaptiveValue("font-size", 20, 14);
+  font-weight: 300;
   letter-spacing: 0.02em;
   line-height: math.div(30, 20);
 }
@@ -88,6 +89,29 @@ h2{
     box-shadow: inset 0px 0px 10px #1B000E;
   }
 }
+.btn-cart{
+  font-size: rem(12);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: $colorWhite;
+  border: 0.5px solid $colorWhite;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  &:hover{
+    border: 0.5px solid transparent;
+    color: $colorBlack;
+    background-color: var(--colorTurquoise);
+  }
+  &.focus-visible{
+    border: 0.5px solid transparent;
+    outline: 0.5px solid $colorTurquoise;
+  }
+  &:active{
+    transition: none;
+    background-color: $colorTurquoise;
+    box-shadow: inset 0px 0px 10px #01281F;
+  }
+}
 .bg-blur{
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -108,9 +132,30 @@ h2{
 }
 .view-catalog{
   font-size: rem(12);
+  font-weight: 700;
   line-height: math.div(18, 12);
   letter-spacing: 0.1em;
   text-decoration-line: underline !important;
+  text-transform: uppercase;
   color: $colorMagenta;
   padding: em(5,12);
+  margin: em(-5,12);
+}
+.relevance-label {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D978AC;
+  font-size: rem(20);
+  font-weight: 300;
+  color: $colorBlack;
+  text-transform: uppercase;
+  border-radius: 50%;
+  width: rem(60);
+  height: rem(60);
+  letter-spacing: 0.02em;
 }
