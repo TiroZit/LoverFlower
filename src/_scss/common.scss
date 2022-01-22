@@ -10,7 +10,7 @@ h1,h2{
   text-transform: uppercase;
 }
 h2{
-  font-size: rem(100);
+  @include adaptiveValue("font-size", 100, 40);
   font-weight: 400;
   line-height: math.div(121, 100);
   letter-spacing: 0.02em;
@@ -112,4 +112,5 @@ h2{
   letter-spacing: 0.1em;
   text-decoration-line: underline !important;
   color: $colorMagenta;
+  padding: em(5,12);
 }

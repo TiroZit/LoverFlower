@@ -10,48 +10,76 @@
     transform: rotate(32.83deg);
   }
   &::before{
-    width: percent(707, 1920);
-    height: percent(636, 1920);
+    width: rem(707);
+    height: rem(236);
     left: percent(-20, 1920);
     top: percent(1065, 1920);
     background: #7D2253;
   }
   &::after{
-    width: percent(879, 1920);
-    height: percent(711, 1920);
+    width: rem(879);
+    height: rem(230);
     top: percent(1100, 1920);
     right: percent(100, 1920);
     background: #249479;
   }
   &__items{
     display: grid;
-    grid-template: 1fr 1fr / auto 540px;
+    grid-template-columns: 1fr 1fr;
     gap: rem(30);
+    @include media-breakpoint-down(mobile){
+      grid-template-columns: 1fr;
+    }
   }
   &__item{
+    @include media-breakpoint-down(tablet){
+      align-items: center;
+    }
     &:nth-child(1){
       transform: translatex(100px);
+      @include media-breakpoint-down(tablet){
+        transform: translatex(50px);
+      }
+      @include media-breakpoint-down(mobile){
+        display: none;
+      }
     }
     &:nth-child(2){
-      width: 445px;
-      justify-self: right;
-      &::before{
-        content:'букеты';
+      align-self: end;
+      @include media-breakpoint-up(mobile){
+        &::before{
+          content:'букеты';
+        }
+      }
+      @include media-breakpoint-up(tablet){
+        margin-left: 100px;
+      }
+      @include media-breakpoint-down(tablet){
+        grid-column: span 2;
+      }
+      @include media-breakpoint-down(mobile){
+        grid-column: auto;
       }
     }
     &:nth-child(3){
-      top: -50px;
-      &::before{
-        content:'Цветы';
-        left: -200px;
+      @include media-breakpoint-up(mobile){
+        top: -50px;
+        margin-top: 50px;
+        &::before{
+          content:'Цветы';
+          left: -200px;
+        }
       }
     }
     &:nth-child(4){
-      &::before{
-        content:'дополнительно';
-        top: auto;
-        bottom: -50px;
-        left: -100px;
+      align-self: end;
+      @include media-breakpoint-up(mobile){
+        &::before{
+          content:'дополнительно';
+          top: auto;
+          bottom: -50px;
+          left: -100px;
+        }
       }
     }
   }
@@ -72,20 +100,26 @@
   padding: 30px;
   background-color: rgba($color: #000000, $alpha: 0.6);
   border-radius: 20px;
-  &::before{
-    content:'Цветы';
-    position: absolute;
-    z-index: -2;
-    top: -40px;
-    left: -50px;
-    transform: translateZ(-1px);
-    font-size: rem(200);
-    font-weight: 700;
-    color: #0A1717;
+  @include media-breakpoint-down(tablet){
+    text-align: center;
+  }
+  @include media-breakpoint-up(mobile){
+    &::before{
+      content:'';
+      position: absolute;
+      z-index: -2;
+      top: -40px;
+      left: -50px;
+      transform: translateZ(-1px);
+      font-size: rem(200);
+      font-weight: 700;
+      color: #0A1717;
+    }  
   }
   &__title{
-    font-size: rem(30);
+    @include adaptiveValue("font-size", 30, 20);
     font-weight: 700;
+    max-width: 271px;
     line-height: math.div(44, 30);
     color: $colorTurquoise;
     margin-left: em(10,30);
@@ -96,7 +130,7 @@
   &__item{
     display: flex;
     align-items: center;
-    font-size: rem(18);
+    @include adaptiveValue("font-size", 18, 14);
     line-height: math.div(27, 18);
     &::before{
       content:'';
@@ -107,9 +141,14 @@
       border-radius: 50%;
       margin-right: em(12,18);
     }
+    @include media-breakpoint-down(tablet){
+      justify-content: center;
+    }
   }
   &__link{
     margin-top: em(20,12);
-    margin-left: auto;
+    @include media-breakpoint-up(tablet){
+      margin-left: auto;
+    }
   }
 }
