@@ -149,7 +149,6 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #D978AC;
   font-size: rem(20);
   font-weight: 300;
   color: $colorBlack;
@@ -158,4 +157,10 @@ h2{
   width: rem(60);
   height: rem(60);
   letter-spacing: 0.02em;
+  &_new{
+    background-color: #D978AC;
+  }
+  &_sale{
+    background-color: #31985A;
+  }
 }
