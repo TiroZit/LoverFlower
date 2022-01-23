@@ -27,6 +27,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: rem(30);
+    margin-top: rem(20);
     @include media-breakpoint-down(mobile){
       grid-template-columns: 1fr;
     }
@@ -46,11 +47,6 @@
     }
     &:nth-child(2){
       align-self: end;
-      @include media-breakpoint-up(mobile){
-        &::before{
-          content:'букеты';
-        }
-      }
       @include media-breakpoint-up(tablet){
         margin-left: 100px;
       }
@@ -66,7 +62,6 @@
         top: -50px;
         margin-top: 50px;
         &::before{
-          content:'Цветы';
           left: -200px;
         }
       }
@@ -75,7 +70,6 @@
       align-self: end;
       @include media-breakpoint-up(mobile){
         &::before{
-          content:'дополнительно';
           top: auto;
           bottom: -50px;
           left: -100px;
@@ -104,7 +98,7 @@
   }
   @include media-breakpoint-up(mobile){
     &::before{
-      content:'';
+      content:attr(data-text);
       position: absolute;
       z-index: -2;
       top: -40px;
@@ -118,7 +112,7 @@
   &__title{
     @include adaptiveValue("font-size", 30, 20);
     font-weight: 700;
-    max-width: 271px;
+    max-width: rem(271);
     line-height: math.div(44, 30);
     color: $colorTurquoise;
     margin-left: em(10,30);

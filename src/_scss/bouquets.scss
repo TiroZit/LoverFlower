@@ -1,6 +1,8 @@
 .bouquets {
-  margin-top: rem(200);
-  background: url("@img/bouquets-bg.jpg") top right no-repeat;
+  @include adaptiveValue("margin-top", 200, 100);
+  @include media-breakpoint-up(tablet){
+    background: url("@img/bouquets-bg.jpg") top right no-repeat;
+  }
   // .bouquets__container
   &__container {
   }
@@ -19,7 +21,6 @@
   }
   // .bouquets__slider
   &__slider {
-    margin-top: rem(80);
   }
   // .bouquets__swiper
   &__swiper {
@@ -31,8 +32,9 @@
   // .bouquets__link
   &__link {
     display: flex;
+    align-items: center;
     width: fit-content;
-    margin-top: rem(80);
+    @include adaptiveValue("margin-top", 80, 40);
     .arrow-right{
       margin-left: 5px;
     }
@@ -41,17 +43,26 @@
 .slider-bouquets {
   position: relative;
   max-width: 1310px;
-  margin: rem(80) auto 0 auto;
+  margin: 0 auto 0 auto;
+  @include adaptiveValue("margin-top", 80, 25);
   &__wrapper{
-    max-width: rem(1120);
     margin: 0 auto;
+    @include media-breakpoint-up(laptop-xl){
+      max-width: rem(1110);
+    }
+    @include media-breakpoint-down(laptop-xl){
+      max-width: rem(735);
+    }
+    @include media-breakpoint-down(mobile){
+      max-width: rem(355);
+    }
   }
 // .slider-bouquets__swiper
   &__swiper {
   }
   // .slider-bouquets__slide
   &__slide {
-    width: 350px !important;
+    max-width: 350px !important;
     text-transform: uppercase;
   }
   // .slider-bouquets__label
@@ -87,11 +98,17 @@
 .bouquets-button-next {
   position: absolute;
   top: calc(50% - 20px);
+  z-index: 2;
   cursor: pointer;
   padding: 10px 5px;
+  @include media-breakpoint-down(tablet){
+    display: none;
+  }
 }
 .bouquets-button-prev {
-  left: -10px;
+  @include media-breakpoint-up(laptop-xl){
+    left: -10px;
+  }
 }
 .bouquets-button-next {
   right: 0;

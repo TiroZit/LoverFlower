@@ -5,14 +5,14 @@ section.catalog
       .catalog__item 
         p.catalog__text.text У нас самый большой выбор цветов, букетов, открыток и подарков. Мы всегда поможем вам подобрать букет для вашего события, наш менеджер вас проконсультирует и поможет определиться с выбором
         p.catalog__text.text Ознакомьтесь с нашими разделами каталога
-      .catalog__item.item-catalog
+      .catalog__item.item-catalog(data-text='букеты')
         .item-catalog__title готовые букеты из сухоцветов
         ul.item-catalog__list 
           li.item-catalog__item букеты
           li.item-catalog__item для интерьера
           li.item-catalog__item Композиции
         a.item-catalog__link.view-catalog(href="#") смотреть каталог
-      .catalog__item.item-catalog
+      .catalog__item.item-catalog(data-text='цветы')
         .item-catalog__title Цветы
         ul.item-catalog__list 
           li.item-catalog__item Сборные букеты
@@ -21,7 +21,7 @@ section.catalog
           li.item-catalog__item розы
           li.item-catalog__item свадебные
         a.item-catalog__link.view-catalog(href="#") смотреть каталог
-      .catalog__item.item-catalog
+      .catalog__item.item-catalog(data-text='дополнительно')
         .item-catalog__title дополнительно
         ul.item-catalog__list 
           li.item-catalog__item шары

@@ -1,0 +1,105 @@
+.order {
+  position: relative;
+  @include adaptiveValue("margin-top", 150, 100);
+  min-height: rem(845);
+  &::before{
+    content:'';
+    position: absolute;
+    z-index: -1;
+    display: block;
+    background: url("@img/order-bg.png") left / contain no-repeat;
+    @include adaptiveValue("width", 562, 249);
+    @include adaptiveValue("height", 845, 374);
+  }
+  @include media-breakpoint-down(tablet){
+    &::after{
+      content:'';
+      display: block;
+      position: absolute;
+      width: rem(236);
+      height: rem(173);
+      bottom: 0;
+      left: 0;
+      background: rgba(67, 255, 210, 0.5);
+      filter: blur(100px);
+      transform: rotate(32.83deg);
+    }
+  }
+  // .order__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-transform: uppercase;
+  }
+  // .order__title
+  &__title {
+    align-self: flex-start;
+    @include media-breakpoint-down(tablet){
+      text-align: center;
+      align-self: center;
+    }
+  }
+  // .order__items
+  &__items {
+    position: relative;
+    display: grid;
+    gap: rem(40) rem(100);
+    @include adaptiveValue("row-gap", 40, 20);
+    grid-template-columns: repeat(2, minmax(rem(200), rem(285)));
+    margin-top: rem(55);
+    @include media-breakpoint-up(tablet){
+      margin-right: rem(100);
+      margin-left: percent(380, 1110);
+    }
+    @include media-breakpoint-down(tablet){
+      grid-template-columns: 1fr;
+    }
+  }
+  // .order__item
+  &__item {
+    &:nth-child(1){
+      position: relative;
+      &::before{
+        content:'';
+        display: block;
+        position: absolute;
+        top: rem(-40);
+        left: 0;
+        width: rem(65);
+        height: rem(10);
+        background-color: $colorMagenta;
+      }  
+      @include media-breakpoint-down(tablet){
+        @include adaptiveValue("margin-left", 350, 150, 992, 320);
+      }
+    }
+    &:nth-child(2){
+      grid-column: 1;
+      grid-row: 2;
+      @include media-breakpoint-down(tablet){
+        @include adaptiveValue("margin-top", 50, 0, 992, 320);
+        @include adaptiveValue("margin-left", 250, 100, 992, 320);
+      }
+    }
+    &:nth-child(3){
+      grid-column: 2 / 1;
+      grid-row: 3;
+      @include media-breakpoint-down(tablet){
+        @include adaptiveValue("margin-left",200, 50, 992, 320);
+      }
+    }
+  }
+  // .order__item-title
+  &__item-title {
+    font-size: rem(30);
+    font-weight: 700;
+    line-height: math.div(44, 30);
+    color: $colorMagenta;
+  }
+  // .order__item-text
+  &__item-text {
+    margin-top: em(12,14);
+    line-height: math.div(21, 14);
+  }
+}
