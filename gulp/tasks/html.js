@@ -2,6 +2,7 @@ import webpHtmlNosvg from 'gulp-webp-avif-html';
 import versionNumber from 'gulp-version-number';
 import pug from 'gulp-pug';
 import htmlmin from 'gulp-htmlmin';
+import typograf from 'gulp-typograf';
 
 export const html = () => {
   return app.gulp.src(app.path.src.html)
@@ -22,6 +23,14 @@ export const html = () => {
       app.plugins.if(
         app.isBuild,
         webpHtmlNosvg()
+      )
+    )
+    .pipe(
+      app.plugins.if(
+        app.isBuild,
+        typograf({
+          locale: ['ru', 'en-US']
+        })
       )
     )
     .pipe(

@@ -39,6 +39,7 @@
     "gulp-svg-sprite": "latest",
     "gulp-svgmin": "^4.1.0",
     "gulp-ttf2woff2": "latest",
+    "gulp-typograf": "^4.0.3",
     "gulp-version-number": "latest",
     "gulp-webp-avif-html": "latest",
     "gulp-webpcss": "^1.1.1",
