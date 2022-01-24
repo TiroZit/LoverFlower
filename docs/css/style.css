@@ -1061,10 +1061,30 @@ h2 {
   line-height: 1.5;
 }
 
+.occasion {
+  position: relative;
+}
+
+.occasion::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18.4375%;
+  height: 45.5%;
+  bottom: 30%;
+  right: 0;
+  z-index: -1;
+  background: #7D2253;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+  -webkit-transform: rotate(32.83deg);
+      -ms-transform: rotate(32.83deg);
+          transform: rotate(32.83deg);
+}
+
 .occasion__title {
   display: flex;
   flex-direction: column;
-  max-width: 48.3125rem;
 }
 
 .occasion__title span {
@@ -1077,7 +1097,6 @@ h2 {
   position: absolute;
   top: 50%;
   display: block;
-  width: 15.9375rem;
   border: 1px solid var(--colorSkyMagenta);
 }
 
@@ -1088,7 +1107,6 @@ h2 {
 }
 
 .occasion__info {
-  flex: 0 1 17.1875rem;
   line-height: 1.5;
 }
 
@@ -1098,15 +1116,10 @@ h2 {
 
 .occasion__list {
   text-transform: uppercase;
-  margin-top: 2.5rem;
 }
 
 .occasion__list-item {
   position: relative;
-}
-
-.occasion__list-item:not(:last-child) {
-  margin-bottom: 2.1428571429em;
 }
 
 .occasion__list-item::before {
@@ -1133,43 +1146,16 @@ h2 {
 .occasion__btn span {
   position: absolute;
   top: -2.1875rem;
-  left: -2.1875rem;
 }
 
 .occasion__items {
   display: grid;
   grid-template-columns: 15.9375rem 10rem 15.9375rem;
-  grid-template-rows: 13.9375rem 1fr;
   gap: 1.875rem;
-  -webkit-transform: translateY(-15.9375rem);
-      -ms-transform: translateY(-15.9375rem);
-          transform: translateY(-15.9375rem);
-}
-
-.occasion__item:nth-child(1) {
-  grid-column: 3/3;
-  grid-row: 1/1;
-}
-
-.occasion__item:nth-child(2) {
-  grid-column: 3/3;
-  grid-row: 2/2;
-}
-
-.occasion__item:nth-child(3) {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.occasion__item:nth-child(4) {
-  grid-column: 1;
-  grid-row: 2;
 }
 
 .occasion__item img {
   border-radius: 1.5625rem;
-  width: 100%;
-  height: 100%;
 }
 
 @media (min-width: 70.625em) {
@@ -1235,12 +1221,70 @@ h2 {
     row-gap: 2.5rem;
   }
 
+  .occasion {
+    margin-top: 9.375rem;
+  }
+
+  .occasion__title {
+    max-width: 48.3125rem;
+  }
+
   .occasion__title span::before {
     left: 6.25rem;
   }
 
+  .occasion__title span::before {
+    width: 15.9375rem;
+  }
+
   .occasion__wrapper {
     margin-left: 6.25rem;
+  }
+
+  .occasion__list {
+    margin-top: 2.5rem;
+  }
+
+  .occasion__list-item:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+
+  .occasion__items {
+    grid-template-rows: 13.9375rem 1fr;
+    -webkit-transform: translateY(-15.9375rem);
+        -ms-transform: translateY(-15.9375rem);
+            transform: translateY(-15.9375rem);
+  }
+
+  .occasion__item:nth-child(1) {
+    grid-column: 3/3;
+    grid-row: 1/1;
+  }
+
+  .occasion__item:nth-child(2) {
+    grid-column: 3/3;
+    grid-row: 2/2;
+  }
+
+  .occasion__item:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .occasion__item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .occasion__item img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 30em) {
+  .occasion__btn span {
+    left: -2.1875rem;
   }
 }
 
@@ -1271,6 +1315,10 @@ h2 {
     font-size: 12.5rem;
     font-weight: 700;
     color: #0A1717;
+  }
+
+  .occasion__info {
+    flex: 0 1 17.1875rem;
   }
 }
 
@@ -1400,18 +1448,56 @@ h2 {
     row-gap: 1.25rem;
   }
 
+  .occasion {
+    margin-top: 6.25rem;
+  }
+
+  .occasion__title {
+    max-width: 16.5rem;
+  }
+
   .occasion__title span::before {
     left: 0.00000625rem;
   }
 
+  .occasion__title span::before {
+    width: 6rem;
+  }
+
   .occasion__wrapper {
     margin-left: 0.00000625rem;
+  }
+
+  .occasion__list {
+    margin-top: 1.25rem;
+  }
+
+  .occasion__list-item:not(:last-child) {
+    margin-bottom: 0.9375rem;
   }
 }
 
 @media (max-width: 74.99875em) {
   .slider-bouquets__wrapper {
     max-width: 45.9375rem;
+  }
+}
+
+@media (max-width: 70.62375em) {
+  .occasion__wrapper {
+    justify-content: space-around;
+  }
+
+  .occasion__items {
+    gap: 1.25rem;
+    grid-template-columns: 15.9375rem 15.9375rem;
+  }
+
+  .occasion__item:nth-child(3) {
+    justify-self: end;
+    -webkit-transform: translateY(-4.6875rem);
+        -ms-transform: translateY(-4.6875rem);
+            transform: translateY(-4.6875rem);
   }
 }
 
@@ -1641,6 +1727,16 @@ h2 {
   .order__items {
     grid-template-columns: 1fr;
   }
+
+  .occasion__items {
+    gap: 0.625rem;
+    grid-template-columns: 15.9375rem;
+  }
+
+  .occasion__item:nth-child(3),
+  .occasion__item:nth-child(4) {
+    display: none;
+  }
 }
 
 @media (max-width: 61.99875em) and (max-width: 20em) {
@@ -1689,6 +1785,32 @@ h2 {
 
   .slider-bouquets__wrapper {
     max-width: 22.1875rem;
+  }
+
+  .occasion__text {
+    max-width: 28.4375rem;
+  }
+
+  .occasion__list {
+    padding-left: 1.25rem;
+  }
+
+  .occasion__items {
+    display: none;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .occasion__btn {
+    margin-left: auto;
+    margin-right: 1.875rem;
+  }
+
+  .occasion__btn span {
+    right: -1.5625rem;
+    -webkit-transform: matrix(0, 1, 1, 0, 0, 0) rotate(-95deg);
+        -ms-transform: matrix(0, 1, 1, 0, 0, 0) rotate(-95deg);
+            transform: matrix(0, 1, 1, 0, 0, 0) rotate(-95deg);
   }
 }
 
@@ -1745,12 +1867,32 @@ h2 {
     row-gap: clamp( 1.25rem , 0.7561728395rem  +  2.4691358025vw , 2.5rem );
   }
 
+  .occasion {
+    margin-top: clamp( 6.25rem , 5.0154320988rem  +  6.1728395062vw , 9.375rem );
+  }
+
+  .occasion__title {
+    max-width: clamp( 16.5rem , 3.9320987654rem  +  62.8395061728vw , 48.3125rem );
+  }
+
   .occasion__title span::before {
     left: clamp( 0.00000625rem , -2.4691270833rem  +  12.3456666667vw , 6.25rem );
   }
 
+  .occasion__title span::before {
+    width: clamp( 6rem , 2.0740740741rem  +  19.6296296296vw , 15.9375rem );
+  }
+
   .occasion__wrapper {
     margin-left: clamp( 0.00000625rem , -2.4691270833rem  +  12.3456666667vw , 6.25rem );
+  }
+
+  .occasion__list {
+    margin-top: clamp( 1.25rem , 0.7561728395rem  +  2.4691358025vw , 2.5rem );
+  }
+
+  .occasion__list-item:not(:last-child) {
+    margin-bottom: clamp( 0.9375rem , 0.5671296296rem  +  1.8518518519vw , 1.875rem );
   }
 }
 
