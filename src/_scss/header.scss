@@ -22,7 +22,6 @@
 	right: 0;
 	z-index: 3;
 	padding: 10px 0;
-	line-height: math.div(21, 14);
 	@media(max-width: $tablet){
 		&._header-show .header__title{
 			display: block;

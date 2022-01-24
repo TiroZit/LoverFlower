@@ -81,6 +81,7 @@ $grid-breakpoints: (
 @import "base/null";
 
 body {
+	line-height: math.div(21, 14);
 	letter-spacing: 0.04em;
 	// Скролл заблокирован
 	.lock & {

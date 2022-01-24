@@ -136,6 +136,7 @@ address {
 }
 
 body {
+  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
@@ -470,7 +471,6 @@ h2 {
   right: 0;
   z-index: 3;
   padding: 10px 0;
-  line-height: 1.5;
 }
 
 .header._header-show {
@@ -964,7 +964,6 @@ h2 {
 
 .slider-bouquets__price {
   font-weight: 700;
-  line-height: 1.5;
   margin-top: 10px;
 }
 
@@ -1058,7 +1057,6 @@ h2 {
 
 .order__item-text {
   margin-top: 0.8571428571em;
-  line-height: 1.5;
 }
 
 .occasion {
@@ -1082,13 +1080,9 @@ h2 {
           transform: rotate(32.83deg);
 }
 
-.occasion__title {
-  display: flex;
-  flex-direction: column;
-}
-
 .occasion__title span {
   position: relative;
+  display: block;
   text-align: right;
 }
 
@@ -1104,10 +1098,6 @@ h2 {
   display: flex;
   margin-top: 1.875rem;
   gap: 1.25rem;
-}
-
-.occasion__info {
-  line-height: 1.5;
 }
 
 .occasion__text {
@@ -1149,6 +1139,8 @@ h2 {
 }
 
 .occasion__items {
+  position: relative;
+  z-index: -1;
   display: grid;
   grid-template-columns: 15.9375rem 10rem 15.9375rem;
   gap: 1.875rem;

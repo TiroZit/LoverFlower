@@ -19,11 +19,10 @@
   }
   // .occasion__title
   &__title {
-    display: flex;
-    flex-direction: column;
     @include adaptiveValue("max-width", 773, 264);
     span{
       position: relative;
+      display: block;
       text-align: right;
       &::before{
         content:'';
@@ -48,7 +47,6 @@
   }
   // .occasion__info
   &__info {
-    line-height: math.div(21, 14);
     @include media-breakpoint-up(mobile){
       flex: 0 1 rem(275);
     }
@@ -115,6 +113,8 @@
   }
   // .occasion__items
   &__items {
+    position: relative;
+    z-index: -1;
     display: grid;
     grid-template-columns: rem(255) rem(160) rem(255);
     gap: rem(30);
