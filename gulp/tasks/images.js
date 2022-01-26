@@ -1,4 +1,4 @@
-import squoosh from 'gulp-libsquoosh';
+import sharpResponsive from 'gulp-sharp-responsive';
 import imagemin from 'gulp-imagemin';
 
 export const images = () => {
@@ -13,10 +13,14 @@ export const images = () => {
     .pipe(
       app.plugins.if(
         app.isBuild,
-        squoosh({
-					avif: {},
-					webp: {},
-				})
+        sharpResponsive({
+          formats: [
+            { format: "avif", avifOptions: {
+              quality: 50
+            }},
+            { format: "webp" },
+          ]
+        })
       )
     )
     .pipe(
