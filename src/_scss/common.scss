@@ -63,6 +63,19 @@ h2{
     font-size: rem(50);
   }
 }
+.elipse-blur{
+  position: absolute;
+  z-index: -1;
+  border-radius: 100px/50px;
+  transform-style: preserve-3d;
+  filter: blur(100px);
+  &_turquoise{
+    background: #249479;
+  }
+  &_darkraspberry{
+    background: #7D2253;
+  }
+}
 .text{
   @include adaptiveValue("font-size", 20, 14);
   font-weight: 300;
@@ -77,13 +90,11 @@ h2{
   background-color: var(--colorTurquoise);
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
-  &:hover{
-    background-color: var(--colorDarkRaspberry);
-  }
-  &.focus-visible{
-    outline: solid #7D2253;
-  }
-  &:active{
+  @media (any-hover: hover){
+    &:hover{
+      background-color: var(--colorDarkRaspberry);
+    }
+}  &:active{
     transition: none;
     background-color: var(--colorDarkRaspberry);
     box-shadow: inset 0px 0px 10px #1B000E;
@@ -97,10 +108,12 @@ h2{
   border: 0.5px solid $colorWhite;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
-  &:hover{
-    border: 0.5px solid transparent;
-    color: $colorBlack;
-    background-color: var(--colorTurquoise);
+  @media (any-hover: hover){
+    &:hover{
+      border: 0.5px solid transparent;
+      color: $colorBlack;
+      background-color: var(--colorTurquoise);
+    }
   }
   &.focus-visible{
     border: 0.5px solid transparent;

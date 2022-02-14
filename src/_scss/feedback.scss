@@ -1,9 +1,31 @@
 .feedback {
   // .feedback__container
-  min-height: 1000px;
+  position: relative;
+  z-index: 1;
   background: url("@img/leaves-bg.png") top left no-repeat,
   url("@img/leaves-shadow.png") top left no-repeat,
   #0F2222;
+  @include media-breakpoint-down(mobile){
+    background: url("@img/leaves-bg_m.png") top right no-repeat,
+  url("@img/leaves-shadow_m.png") top right no-repeat,
+  #0F2222;
+  }
+  @include media-breakpoint-up(mobile){
+    &__elipse_turquoise{
+      width: 18%;
+      height: 35%;
+      left: percent(559, 1920);
+      top: percent(753, 1920);
+      transform: rotate(32deg);
+    }
+    &__elipse_darkraspberry{
+      width: percent(416, 1920);
+      height: percent(627, 1920);
+      left: percent(150, 1920);
+      top: percent(500, 1920);
+      transform: rotate(-32deg);
+    }
+  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -11,25 +33,36 @@
   }
   // .feedback__title
   &__title {
-    max-width: rem(630);
+    @include media-breakpoint-up(mobile){
+      max-width: em(630,100);
+    }
     span{
       display: block;
-      text-align: right;
+      @include media-breakpoint-up(mobile){
+        text-align: right;
+      }
     }
   }
   // .feedback__form
   &__form {
-    align-self: flex-end;
-    transform: translateY(-150px);
+    @include media-breakpoint-up(mobile){
+      align-self: flex-end;
+      transform: translateY(-150px);
+    }
   }
 }
 .form-feedback {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+  @include media-breakpoint-down(mobile){
+    margin-top: rem(100);
+  }
   // .form-feedback__text
   &__text {
-    align-self: flex-end;
+    @include media-breakpoint-up(mobile){
+      align-self: flex-end;
+    }
     max-width: rem(255);
     &::before{
       content:'';
@@ -38,6 +71,10 @@
       height: 1px;
       background-color: var(--colorTurquoise);
       margin-bottom: rem(50);
+      @include media-breakpoint-down(mobile){
+        width: 50%;
+        margin-bottom: rem(20);
+      }
     }
   }
   // .form-feedback__fieldset
@@ -45,8 +82,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(10);
-    min-width: rem(445);
     margin-top: rem(30);
+    @include media-breakpoint-up(mobile){
+      min-width: rem(445);
+    }
   }
   // .form-feedback__input
   &__input {
@@ -57,11 +96,11 @@
       color: #395959;
       text-transform: uppercase;
     }
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      appearance: none;
-      margin: 0;
-    }
+    // &::-webkit-outer-spin-button,
+    // &::-webkit-inner-spin-button {
+    //   appearance: none;
+    //   margin: 0;
+    // }
   }
   // .form-feedback__textarea
   &__textarea {

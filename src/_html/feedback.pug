@@ -1,4 +1,6 @@
 section.feedback
+  span.feedback__elipse_darkraspberry.elipse-blur.elipse-blur_darkraspberry
+  span.feedback__elipse_turquoise.elipse-blur.elipse-blur_turquoise
   .feedback__container
     h2.feedback__title
       | остались
@@ -8,7 +10,7 @@ section.feedback
       p.form-feedback__text Отправьте ваш вопрос, заказ, предложение или жалобу через форму обратной связи, и наш специалист свяжется с вами в течение 15 минут.
       fieldset.form-feedback__fieldset
         input.form-feedback__input(type="text" name='name' placeholder='Ваше имя' required)
-        input.form-feedback__input(type="number" name='phone' placeholder='+7 (977) 777-77-77' required)
+        input.form-feedback__input(type="tel" name='phone' placeholder='+7 (977) 777-77-77' required)
         textarea.form-feedback__textarea.form-feedback__input(type="text" name='comment' placeholder='Ваш комментарий' autocomplete="off" required)
       button.form-feedback__btn.btn-turquoise(type="submit") отправить
       .form-feedback__agree
