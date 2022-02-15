@@ -714,6 +714,11 @@ h2 {
           transform: rotate(-43.21deg);
 }
 
+.welcome__title-signature {
+  right: 1.25rem;
+  bottom: 1.25rem !important;
+}
+
 .welcome__container {
   position: relative;
   z-index: 1;
@@ -1038,6 +1043,15 @@ h2 {
   text-transform: uppercase;
 }
 
+.order__title-signature {
+  bottom: 0;
+  line-height: 44%;
+  color: #1F3A3A;
+  -webkit-transform: rotate(-11.95deg);
+      -ms-transform: rotate(-11.95deg);
+          transform: rotate(-11.95deg);
+}
+
 .order__title {
   align-self: flex-start;
 }
@@ -1342,6 +1356,10 @@ h2 {
     height: 52.8125rem;
   }
 
+  .order__title-signature span {
+    padding-left: 3.125rem;
+  }
+
   .order__items {
     row-gap: 2.5rem;
   }
@@ -1575,8 +1593,17 @@ h2 {
   }          .webp .bouquets {            background: url("../img/bouquets-bg.webp") top right no-repeat          }                  .avif .bouquets {            background: url("../img/bouquets-bg.avif") top right no-repeat          }        
 
   .order__items {
-    margin-right: 6.25rem;
+    padding-right: 6.25rem;
     margin-left: 34.2342342342%;
+  }
+
+  .order__items::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #D978AC;
   }
 
   .occasion__text {
@@ -1645,6 +1672,10 @@ h2 {
 
   .order::before {
     height: 23.375rem;
+  }
+
+  .order__title-signature span {
+    padding-left: 0.625rem;
   }
 
   .order__items {
@@ -1922,6 +1953,10 @@ h2 {
             transform: rotate(32.83deg);
   }
 
+  .order__title-signature {
+    bottom: -3.125rem;
+  }
+
   .order__title {
     text-align: center;
     align-self: center;
@@ -2085,6 +2120,10 @@ h2 {
 
   .order::before {
     height: clamp( 23.375rem , 11.7453703704rem  +  58.1481481481vw , 52.8125rem );
+  }
+
+  .order__title-signature span {
+    padding-left: clamp( 0.625rem , -0.362654321rem  +  4.9382716049vw , 3.125rem );
   }
 
   .order__items {

@@ -24,6 +24,10 @@
     background: #7D2253;
     transform: rotate(-43.21deg);
   }
+  &__title-signature{
+    right: rem(20);
+    bottom: rem(20) !important;
+  }
   &__container{
     position: relative;
     z-index: 1;
