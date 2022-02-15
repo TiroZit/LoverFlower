@@ -1,7 +1,7 @@
 .welcome{
   position: relative;
   min-height: 100vh;
-  background: url("@img/flowers-bg.jpg") center / cover no-repeat;
+  background: linear-gradient(180deg, rgba(4,10,10,0) 0%, rgba(4,10,10,0.8) 100%),url("@img/flowers-bg.jpg") bottom /cover no-repeat;
   &::before,&::after{
     content:'';
     position: absolute;

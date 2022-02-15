@@ -680,8 +680,10 @@ h2 {
 .welcome {
   position: relative;
   min-height: 100vh;
-  background: url("../img/flowers-bg.jpg") center/cover no-repeat;
-}          .webp .welcome {            background: url("../img/flowers-bg.webp") center/cover no-repeat          }                  .avif .welcome {            background: url("../img/flowers-bg.avif") center/cover no-repeat          }        
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 10, 10, 0)), to(rgba(4, 10, 10, 0.8))), url("../img/flowers-bg.jpg") bottom/cover no-repeat;
+  background: -o-linear-gradient(top, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.jpg") bottom/cover no-repeat;
+  background: linear-gradient(180deg, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.jpg") bottom/cover no-repeat;
+}          .webp .welcome {            background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 10, 10, 0)), to(rgba(4, 10, 10, 0.8))), url("../img/flowers-bg.webp") bottom/cover no-repeat;            background: -o-linear-gradient(top, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.webp") bottom/cover no-repeat;            background: linear-gradient(180deg, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.webp") bottom/cover no-repeat          }                  .avif .welcome {            background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 10, 10, 0)), to(rgba(4, 10, 10, 0.8))), url("../img/flowers-bg.avif") bottom/cover no-repeat;            background: -o-linear-gradient(top, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.avif") bottom/cover no-repeat;            background: linear-gradient(180deg, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.avif") bottom/cover no-repeat          }        
 
 .welcome::before,
 .welcome::after {
