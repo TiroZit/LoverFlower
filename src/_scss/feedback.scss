@@ -2,13 +2,25 @@
   // .feedback__container
   position: relative;
   z-index: 1;
-  background: url("@img/leaves-bg.png") top left no-repeat,
-  url("@img/leaves-shadow.png") top left no-repeat,
+  background:
   #0F2222;
   @include media-breakpoint-down(mobile){
     background: url("@img/leaves-bg_m.png") top right no-repeat,
-  url("@img/leaves-shadow_m.png") top right no-repeat,
-  #0F2222;
+  url("@img/leaves-shadow_m.png") top right no-repeat, #0F2222;
+  }
+  @include media-breakpoint-up(mobile){
+    &::before{
+      content:'';
+      display: block;
+      position: absolute;
+      top: rem(70);
+      @include adaptiveValue("width", 533, 133.25);
+      @include adaptiveValue("height", 836, 209);
+      // width: percent(533, 1920);
+      // height: percent(836, 1920);
+      background: url("@img/leaves-bg.png") center / cover no-repeat,
+      url("@img/leaves-shadow.png") center / cover no-repeat;
+    }
   }
   @include media-breakpoint-up(mobile){
     &__elipse_turquoise{
@@ -17,6 +29,12 @@
       left: percent(559, 1920);
       top: percent(753, 1920);
       transform: rotate(32deg);
+      // @include media-breakpoint-down(mobile){
+      //   top: 14%;
+      //   right: 10%;
+      //   left: auto;
+      //   filter: blur(70px);
+      // }
     }
     &__elipse_darkraspberry{
       width: percent(416, 1920);
@@ -24,9 +42,37 @@
       left: percent(150, 1920);
       top: percent(500, 1920);
       transform: rotate(-32deg);
+      // @include media-breakpoint-down(mobile){
+      //   top: 14%;
+      //   right: 30%;
+      //   left: auto;
+      //   filter: blur(70px);
+      // }
+    }
+  }
+  @include media-breakpoint-up(mobile){
+    &__title-signature{
+      top: 45%;
+      left: 30%;
+      color: #0E2C2C;
+      line-height: 37%;
+      max-width: rem(305);
+      transform: rotate(-18.44deg);
+      text-transform: lowercase;
+      @include media-breakpoint-down(mobile){
+        top: 20%;
+        right: 0%;
+        left: auto;
+      }
+    }
+  }
+  @include media-breakpoint-down(mobile){
+    &__title-signature{
+      display: none;
     }
   }
   &__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-top: rem(20);
@@ -47,7 +93,8 @@
   &__form {
     @include media-breakpoint-up(mobile){
       align-self: flex-end;
-      transform: translateY(-150px);
+      transform: translateY(rem(-150));
+      margin-bottom: rem(-100);
     }
   }
 }

@@ -15,6 +15,15 @@ h2{
   line-height: math.div(110, 100);
   letter-spacing: 0.02em;
 }
+.title-signature{
+  position: absolute;
+  font-family: Relative;
+  font-weight: 400;
+  @include adaptiveValue("font-size", 160, 60);
+  line-height: math.div(70, 160);
+  text-transform: capitalize;
+  user-select: none;
+}
 .menu-open .overlay{
 	opacity: 1;
 	visibility: visible;
