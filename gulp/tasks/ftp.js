@@ -1,5 +1,5 @@
 import { configFTP } from '../config/ftp.js';
-import vinylFTP from 'vinyl-ftp';
+import vinylFTP from 'gulp-sftp';
 import util from 'gulp-util';
 
 export const ftp = () => {

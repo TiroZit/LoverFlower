@@ -35,5 +35,5 @@ export const path = {
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,
-  ftp: `/var/www/tirozit.ga`// Папка на удаленном сервере, куда залить
+  ftp: `/var/www/loverflower`// Папка на удаленном сервере, куда залить
 }

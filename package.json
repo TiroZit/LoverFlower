@@ -36,6 +36,7 @@
     "gulp-replace": "latest",
     "gulp-sass": "latest",
     "gulp-sass-bulk-importer": "^3.0.2",
+    "gulp-sftp": "^0.1.5",
     "gulp-sharp-responsive": "^0.3.0",
     "gulp-svg-sprite": "latest",
     "gulp-svgmin": "^4.1.0",

@@ -16,7 +16,7 @@ export const images = () => {
         sharpResponsive({
           formats: [
             { format: "avif", avifOptions: {
-              quality: 50
+              quality: 70
             }},
             { format: "webp" },
           ]
