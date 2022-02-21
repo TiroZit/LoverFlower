@@ -60,6 +60,7 @@
     @include adaptiveValue("row-gap", 40, 20);
     grid-template-columns: repeat(2, minmax(rem(200), rem(285)));
     margin-top: rem(55);
+    counter-reset: ol-numbers;
     @include media-breakpoint-up(tablet){
       padding-right: rem(100);
       margin-left: percent(380, 1110);
@@ -79,9 +80,22 @@
   }
   // .order__item
   &__item {
+    position: relative;
+    padding-top: rem(56);
+    &::before{
+      content: counter(ol-numbers) " " "шаг";
+      counter-increment: ol-numbers;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: rem(30);
+      font-weight: 700;
+      line-height: math.div(44, 30);
+      color: $colorMagenta;
+    }
     &:nth-child(1){
       position: relative;
-      &::before{
+      &::after{
         content:'';
         display: block;
         position: absolute;
@@ -110,16 +124,5 @@
         @include adaptiveValue("margin-left",200, 50, 992, 320);
       }
     }
-  }
-  // .order__item-title
-  &__item-title {
-    font-size: rem(30);
-    font-weight: 700;
-    line-height: math.div(44, 30);
-    color: $colorMagenta;
-  }
-  // .order__item-text
-  &__item-text {
-    margin-top: em(12,14);
   }
 }

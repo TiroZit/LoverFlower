@@ -119,7 +119,8 @@ a:hover {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
@@ -1064,13 +1065,31 @@ h2 {
   gap: 2.5rem 6.25rem;
   grid-template-columns: repeat(2, minmax(12.5rem, 17.8125rem));
   margin-top: 3.4375rem;
+  counter-reset: ol-numbers;
+}
+
+.order__item {
+  position: relative;
+  padding-top: 3.5rem;
+}
+
+.order__item::before {
+  content: counter(ol-numbers) " " "шаг";
+  counter-increment: ol-numbers;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.4666666667;
+  color: var(--colorSkyMagenta);
 }
 
 .order__item:nth-child(1) {
   position: relative;
 }
 
-.order__item:nth-child(1)::before {
+.order__item:nth-child(1)::after {
   content: "";
   display: block;
   position: absolute;
@@ -1089,17 +1108,6 @@ h2 {
 .order__item:nth-child(3) {
   grid-column: 2/1;
   grid-row: 3;
-}
-
-.order__item-title {
-  font-size: 1.875rem;
-  font-weight: 700;
-  line-height: 1.4666666667;
-  color: var(--colorSkyMagenta);
-}
-
-.order__item-text {
-  margin-top: 0.8571428571em;
 }
 
 .occasion {
