@@ -1,0 +1,128 @@
+.order {
+  position: relative;
+  @include adaptiveValue("margin-top", 150, 100);
+  min-height: rem(845);
+  &::before{
+    content:'';
+    position: absolute;
+    z-index: -1;
+    display: block;
+    background: url("@img/order-bg.png") left / contain no-repeat;
+    @include adaptiveValue("width", 562, 249);
+    @include adaptiveValue("height", 845, 374);
+  }
+  @include media-breakpoint-down(tablet){
+    &::after{
+      content:'';
+      display: block;
+      position: absolute;
+      width: rem(236);
+      height: rem(173);
+      bottom: 0;
+      left: 0;
+      background: rgba(67, 255, 210, 0.5);
+      filter: blur(100px);
+      transform: rotate(32.83deg);
+    }
+  }
+  // .order__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-transform: uppercase;
+  }
+  &__title-signature{
+    bottom: 0;
+    line-height: 44%;
+    color: #1F3A3A;
+    transform: rotate(-11.95deg);
+    span{
+      @include adaptiveValue("padding-left", 50, 10);
+    }
+    @include media-breakpoint-down(tablet){
+      bottom: rem(-50);
+    }
+  }
+  // .order__title
+  &__title {
+    align-self: flex-start;
+    @include media-breakpoint-down(tablet){
+      text-align: center;
+      align-self: center;
+    }
+  }
+  // .order__items
+  &__items {
+    position: relative;
+    display: grid;
+    gap: rem(40) rem(100);
+    @include adaptiveValue("row-gap", 40, 20);
+    grid-template-columns: repeat(2, minmax(rem(200), rem(285)));
+    margin-top: rem(55);
+    counter-reset: ol-numbers;
+    @include media-breakpoint-up(tablet){
+      padding-right: rem(100);
+      margin-left: percent(380, 1110);
+      &::after{
+        content:'';
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background-color: #D978AC;
+      }
+    }
+    @include media-breakpoint-down(tablet){
+      grid-template-columns: 1fr;
+    }
+    
+  }
+  // .order__item
+  &__item {
+    position: relative;
+    padding-top: rem(56);
+    &::before{
+      content: counter(ol-numbers) " " "шаг";
+      counter-increment: ol-numbers;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: rem(30);
+      font-weight: 700;
+      line-height: math.div(44, 30);
+      color: var(--colorSkyMagenta);
+    }
+    &:nth-child(1){
+      position: relative;
+      &::after{
+        content:'';
+        display: block;
+        position: absolute;
+        top: rem(-40);
+        left: 0;
+        width: rem(65);
+        height: rem(10);
+        background-color: var(--colorSkyMagenta);
+      }  
+      @include media-breakpoint-down(tablet){
+        @include adaptiveValue("margin-left", 350, 150, 992, 320);
+      }
+    }
+    &:nth-child(2){
+      grid-column: 1;
+      grid-row: 2;
+      @include media-breakpoint-down(tablet){
+        @include adaptiveValue("margin-top", 50, 0, 992, 320);
+        @include adaptiveValue("margin-left", 250, 100, 992, 320);
+      }
+    }
+    &:nth-child(3){
+      grid-column: 2 / 1;
+      grid-row: 3;
+      @include media-breakpoint-down(tablet){
+        @include adaptiveValue("margin-left",200, 50, 992, 320);
+      }
+    }
+  }
+}

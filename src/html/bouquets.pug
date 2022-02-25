@@ -1,0 +1,66 @@
+section.bouquets
+  .bouquets__container
+    h2.bouquets__title
+      |популярные
+      br
+      span букеты
+    p.bouquets__text.text Самые любимые композиции наших клиентов
+  .bouquets__slider.slider-bouquets
+    .slider-bouquets__wrapper
+      .bouquets__swiper.slider-bouquets__swiper
+        .bouquets__slide.slider-bouquets__slide
+          .slider-bouquets__img-block 
+            .slider-bouquets__label.relevance-label.relevance-label_new new
+            img.swiper-lazy._lazy(width='350' height='450' data-src='img/bouquets/1.jpg' alt='Букет Лучший День',)
+          .slider-bouquets__title лучший день
+          .slider-bouquets__price 
+            |167.000 ₽
+          button.slider-bouquets__btn-cart.btn-cart(type='button') В корзину
+        .bouquets__slide.slider-bouquets__slide
+          .slider-bouquets__img-block 
+            img.swiper-lazy._lazy(width='350' height='450' data-src='img/bouquets/2.jpg' alt='Букет Лучший День',)
+          .slider-bouquets__title лучший день
+          .slider-bouquets__price 
+            |167.000 ₽
+          button.slider-bouquets__btn-cart.btn-cart(type='button') В корзину
+        .bouquets__slide.slider-bouquets__slide
+          .slider-bouquets__img-block 
+            .slider-bouquets__label.relevance-label.relevance-label_sale sale
+            img.swiper-lazy._lazy(width='350' height='450' data-src='img/bouquets/3.jpg' alt='Букет Лучший День',)
+          .slider-bouquets__title лучший день
+          .slider-bouquets__price 
+            |167.000 ₽
+            s 187.000 ₽
+          button.slider-bouquets__btn-cart.btn-cart(type='button') В корзину
+        .bouquets__slide.slider-bouquets__slide
+          .slider-bouquets__img-block 
+            .slider-bouquets__label.relevance-label.relevance-label_new new
+            img.swiper-lazy._lazy(width='350' height='450' data-src='img/bouquets/1.jpg' alt='Букет Лучший День',)
+          .slider-bouquets__title лучший день
+          .slider-bouquets__price 
+            |167.000 ₽
+          button.slider-bouquets__btn-cart.btn-cart(type='button') В корзину
+        .bouquets__slide.slider-bouquets__slide
+          .slider-bouquets__img-block 
+            img.swiper-lazy._lazy(width='350' height='450' data-src='img/bouquets/2.jpg' alt='Букет Лучший День',)
+          .slider-bouquets__title лучший день
+          .slider-bouquets__price 
+            |167.000 ₽
+          button.slider-bouquets__btn-cart.btn-cart(type='button') В корзину
+        .bouquets__slide.slider-bouquets__slide
+          .slider-bouquets__img-block 
+            .slider-bouquets__label.relevance-label.relevance-label_sale sale
+            img.swiper-lazy._lazy(width='350' height='450' data-src='img/bouquets/3.jpg' alt='Букет Лучший День',)
+          .slider-bouquets__title лучший день
+          .slider-bouquets__price 
+            |167.000 ₽
+            s 187.000 ₽
+          button.slider-bouquets__btn-cart.btn-cart(type='button') В корзину
+    .bouquets-button-prev.swiper-button-prev
+      +svg('arrow-left', '80', '20', '#43FFD2', 'none')
+    .bouquets-button-next.swiper-button-next
+      +svg('arrow-right', '80', '20', '#43FFD2', 'none')
+  .bouquets__container
+    a.bouquets__link.view-catalog(href="#")
+      |смотреть весь каталог
+      +svg('arrow-right', '40', '10', 'currentColor', 'none')
