@@ -32,12 +32,7 @@ export const css = () => {
 				app.isWebP,
 				app.plugins.if(
 					app.isBuild,
-					webpcss(
-						{
-							webpClass: ".webp",
-							noWebpClass: ".no-webp"
-						}
-					)
+					webpcss()
 				)
 			)
 		)

@@ -67,6 +67,8 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
+	line-height: math.div(21, 14);
+	letter-spacing: 0.04em;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -87,9 +89,9 @@ body {
 		flex: 1 1 auto;
 	}
 	// Фикс для слайдеров
-	// > * {
-	// 	min-width: 0;
-	// }
+	> * {
+		min-width: 0;
+	}
 }
 // Ограничивающий контейнер
 .js-focus-visible :focus-visible{

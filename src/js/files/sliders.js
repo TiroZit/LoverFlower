@@ -22,9 +22,22 @@ import "../../scss/base/swiper.scss";
 // import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
 // import 'swiper/css';
-
+function bildSliders() {
+	//BildSlider
+	let sliders = document.querySelectorAll('[class*="__swiper"]:not(.swiper-wrapper)');
+	if (sliders) {
+		sliders.forEach(slider => {
+			slider.parentElement.classList.add('swiper');
+			slider.classList.add('swiper-wrapper');
+			for (const slide of slider.children) {
+				slide.classList.add('swiper-slide');
+			}
+		});
+	}
+}
 // Инициализация слайдеров
 function initSliders() {
+	bildSliders();
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
 	if (document.querySelector('.swiper')) {
@@ -85,6 +98,7 @@ function initSliders() {
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
+	bildSliders();
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
 	if (sliderScrollItems.length > 0) {
 		for (let index = 0; index < sliderScrollItems.length; index++) {
