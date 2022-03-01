@@ -5,8 +5,7 @@
   background:
   #0F2222;
   @include media-breakpoint-down(mobile){
-    background: url("@img/leaves-bg_m.png") top right no-repeat,
-  url("@img/leaves-shadow_m.png") top right no-repeat, #0F2222;
+    background: url("@img/leaves-bg_m.png") top right no-repeat, #0F2222;
   }
   @include media-breakpoint-up(mobile){
     &::before{
@@ -18,8 +17,7 @@
       @include adaptiveValue("height", 836, 209);
       // width: percent(533, 1920);
       // height: percent(836, 1920);
-      background: url("@img/leaves-bg.png") center / cover no-repeat,
-      url("@img/leaves-shadow.png") center / cover no-repeat;
+      background: url("@img/leaves-bg.png") center / cover no-repeat;
     }
   }
   @include media-breakpoint-up(mobile){

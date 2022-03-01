@@ -278,6 +278,35 @@ h2 {
   visibility: visible;
 }
 
+.address__title {
+  color: var(--colorTurquoise);
+  letter-spacing: 0.1em;
+}
+
+.address__sub-title {
+  font-size: 0.625rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--colorWhite);
+  margin-top: 0.5em;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials__item {
+  display: flex;
+  color: var(--colorTurquoise);
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.socials__item:hover {
+  color: var(--colorDarkRaspberry);
+}
+
 .overlay {
   position: absolute;
   left: 0;
@@ -795,6 +824,7 @@ h2 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  gap: 1.25rem;
   margin-top: 0.625em;
 }
 
@@ -828,36 +858,6 @@ h2 {
 .welcome__cart.cart-btn::after {
   top: -13.3333333333%;
   right: -26.6666666667%;
-}
-
-.address__title {
-  color: var(--colorTurquoise);
-  letter-spacing: 0.1em;
-}
-
-.address__sub-title {
-  font-size: 0.625rem;
-  font-weight: 300;
-  line-height: 1.5;
-  color: var(--colorWhite);
-  margin-top: 0.5em;
-}
-
-.socials {
-  display: flex;
-  gap: 1.25rem;
-}
-
-.socials__item {
-  display: flex;
-  color: var(--colorTurquoise);
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.socials__item:hover {
-  color: var(--colorDarkRaspberry);
 }
 
 .menu-open .welcome__cart {
@@ -1536,6 +1536,129 @@ h2 {
   color: var(--colorSkyMagenta);
 }
 
+.contacts {
+  position: relative;
+  min-height: 38.6875rem;
+}
+
+.contacts__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12.5rem;
+}
+
+.contacts__gallery {
+  position: relative;
+  display: grid;
+  gap: 1.875rem;
+  grid-template-columns: repeat(4, 160px);
+}
+
+.contacts__gallery::after {
+  content: attr(data-text);
+  position: absolute;
+  z-index: -2;
+  top: -20px;
+  left: -120px;
+  text-transform: uppercase;
+  -webkit-transform: translateZ(-1px);
+          transform: translateZ(-1px);
+  font-size: 12.5rem;
+  font-weight: 700;
+  color: #0A1717;
+}
+
+.contacts__title-signature {
+  position: absolute;
+  right: 50px;
+  top: 130px;
+  text-transform: lowercase;
+}
+
+@supports (max-width: clamp( 8.375rem , 4.1527777778rem  +  21.1111111111vw , 19.0625rem )) {
+  .contacts__title-signature {
+    max-width: clamp( 8.375rem , 4.1527777778rem  +  21.1111111111vw , 19.0625rem );
+  }
+}
+
+@supports not (max-width: clamp( 8.375rem , 4.1527777778rem  +  21.1111111111vw , 19.0625rem )) {
+  .contacts__title-signature {
+    max-width: calc(8.375rem + 10.6875 * (100vw - 20rem) / 50.625);
+  }
+}
+
+.contacts__title-signature::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 0.0625rem;
+  background-color: var(--colorTurquoise);
+}
+
+@supports (width: clamp( 6.25rem , 0.0771604938rem  +  30.8641975309vw , 21.875rem )) {
+  .contacts__title-signature::before {
+    width: clamp( 6.25rem , 0.0771604938rem  +  30.8641975309vw , 21.875rem );
+  }
+}
+
+@supports not (width: clamp( 6.25rem , 0.0771604938rem  +  30.8641975309vw , 21.875rem )) {
+  .contacts__title-signature::before {
+    width: calc(6.25rem + 15.625 * (100vw - 20rem) / 50.625);
+  }
+}
+
+.contacts__socials {
+  align-self: flex-end;
+  gap: 1.875rem;
+}
+
+@supports (width: clamp( 1.25rem , 0.7561728395rem  +  2.4691358025vw , 2.5rem )) {
+  .contacts__socials > .socials__item {
+    width: clamp( 1.25rem , 0.7561728395rem  +  2.4691358025vw , 2.5rem );
+  }
+}
+
+@supports not (width: clamp( 1.25rem , 0.7561728395rem  +  2.4691358025vw , 2.5rem )) {
+  .contacts__socials > .socials__item {
+    width: calc(1.25rem + 1.25 * (100vw - 20rem) / 50.625);
+  }
+}
+
+@supports (height: clamp( 1.25rem , 0.7561728395rem  +  2.4691358025vw , 2.5rem )) {
+  .contacts__socials > .socials__item {
+    height: clamp( 1.25rem , 0.7561728395rem  +  2.4691358025vw , 2.5rem );
+  }
+}
+
+@supports not (height: clamp( 1.25rem , 0.7561728395rem  +  2.4691358025vw , 2.5rem )) {
+  .contacts__socials > .socials__item {
+    height: calc(1.25rem + 1.25 * (100vw - 20rem) / 50.625);
+  }
+}
+
+.contacts__elipse_turquoise_1 {
+  width: 15%;
+  height: 20%;
+  left: -10%;
+  bottom: -10%;
+  -webkit-transform: rotate(21deg);
+      -ms-transform: rotate(21deg);
+          transform: rotate(21deg);
+}
+
+.contacts__elipse_darkraspberry {
+  width: 20%;
+  height: 40%;
+  right: -5%;
+  bottom: -10%;
+  -webkit-transform: rotate(32deg);
+      -ms-transform: rotate(32deg);
+          transform: rotate(32deg);
+}
+
 .swiper {
   overflow: hidden;
   position: relative;
@@ -1672,8 +1795,8 @@ h2 {
     display: block;
     position: absolute;
     top: 4.375rem;
-    background: url("../img/leaves-bg.png") center/cover no-repeat, url("../img/leaves-shadow.png") center/cover no-repeat;
-  }          .webp .feedback::before {            background: url("../img/leaves-bg.webp") center/cover no-repeat, url("../img/leaves-shadow.png") center/cover no-repeat          }                  .avif .feedback::before {            background: url("../img/leaves-bg.avif") center/cover no-repeat, url("../img/leaves-shadow.png") center/cover no-repeat          }        
+    background: url("../img/leaves-bg.png") center/cover no-repeat;
+  }          .webp .feedback::before {            background: url("../img/leaves-bg.webp") center/cover no-repeat          }                  .avif .feedback::before {            background: url("../img/leaves-bg.avif") center/cover no-repeat          }        
 
 @supports (width: clamp( 8.328125rem , -1.5422453704rem  +  49.3518518519vw , 33.3125rem )) {
     .feedback::before {
@@ -1825,6 +1948,16 @@ h2 {
 
   .occasion__text {
     text-transform: uppercase;
+  }
+
+  .contacts__elipse_turquoise_2 {
+    width: 30%;
+    height: 60%;
+    left: 45%;
+    bottom: -60%;
+    -webkit-transform: rotate(21deg);
+        -ms-transform: rotate(21deg);
+            transform: rotate(21deg);
   }
 }
 
@@ -2207,8 +2340,8 @@ h2 {
   }
 
   .feedback {
-    background: url("../img/leaves-bg_m.png") top right no-repeat, url("../img/leaves-shadow_m.png") top right no-repeat, #0F2222;
-  }          .webp .feedback {            background: url("../img/leaves-bg_m.webp") top right no-repeat, url("../img/leaves-shadow_m.png") top right no-repeat, #0F2222          }                  .avif .feedback {            background: url("../img/leaves-bg_m.avif") top right no-repeat, url("../img/leaves-shadow_m.png") top right no-repeat, #0F2222          }        
+    background: url("../img/leaves-bg_m.png") top right no-repeat, #0F2222;
+  }          .webp .feedback {            background: url("../img/leaves-bg_m.webp") top right no-repeat, #0F2222          }                  .avif .feedback {            background: url("../img/leaves-bg_m.avif") top right no-repeat, #0F2222          }        
 
   .feedback__title-signature {
     display: none;
