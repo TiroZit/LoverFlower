@@ -1,40 +1,65 @@
 .contacts {
   position: relative;
-  min-height: rem(619);
+  @include media-breakpoint-up(pc){
+    min-height: rem(619);
+  }
   // .contacts__container
   &__container {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-top: rem(200);
+    @include media-breakpoint-down(tablet){
+      justify-content: center;
+    }
+    @include adaptiveValue("padding-top", 200, 150);
+    padding-bottom: rem(100);
   }
   // .contacts__gallery
   &__gallery {
     position: relative;
     display: grid;
-    gap: rem(30);
+    @include adaptiveValue("gap", 30, 5);
     grid-template-columns: repeat(4, 160px);
-    &::after{
-      content:attr(data-text);
-      position: absolute;
-      z-index: -2;
-      top: -20px;
-      left: -120px;
-      text-transform: uppercase;
-      transform: translateZ(-1px);
-      font-size: rem(200);
-      font-weight: 700;
-      color: #0A1717;
+    @include media-breakpoint-down(mobile){
+      grid-template-columns: repeat(3, 160px);
+    }
+    @include media-breakpoint-down(mobileSmall){
+      grid-template-columns: repeat(2, 147px);
+    }
+    @include media-breakpoint-up(mobile){
+      &::after{
+        content:attr(data-text);
+        position: absolute;
+        z-index: -2;
+        top: -20px;
+        @include media-breakpoint-up(pc){
+          left: -120px;
+        }
+        text-transform: uppercase;
+        transform: translateZ(-1px);
+        font-size: rem(200);
+        font-weight: 700;
+        color: #0A1717;
+      }
     }
   }
   // .contacts__gallery-item
   &__gallery-item {
+    &>img{
+      @include adaptiveValue("width", 160, 147);
+    }
   }
   // .contacts__title-signature
   &__title-signature {
     position: absolute;
-    right: 50px;
+    @include media-breakpoint-up(pc){
+      right: 50px;
+    }
     top: 130px;
+    @include media-breakpoint-down(pc){
+      left: 10px;
+      top: 50px;
+    }
     text-transform: lowercase;
     @include adaptiveValue("max-width", 305, 134);
     &::before{
@@ -49,11 +74,18 @@
     }
   }
   &__socials{
-    align-self: flex-end;
-    gap: rem(30);
+    @include media-breakpoint-up(tablet){
+      align-self: flex-end;
+    }
+    @include media-breakpoint-down(tablet){
+      position: absolute;
+      right: 10px;
+      @include adaptiveValue("top", 120, 80);
+    }
+    @include adaptiveValue("gap", 30, 20);
     &>.socials__item{
-      @include adaptiveValue("width", 40, 20);
-      @include adaptiveValue("height", 40, 20);
+      @include adaptiveValue("width", 40, 30);
+      @include adaptiveValue("height", 40, 30);
     }
   }
   &__elipse_turquoise_1{

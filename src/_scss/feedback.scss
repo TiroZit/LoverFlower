@@ -12,7 +12,7 @@
       content:'';
       display: block;
       position: absolute;
-      top: rem(70);
+      top: rem(100);
       @include adaptiveValue("width", 533, 133.25);
       @include adaptiveValue("height", 836, 209);
       // width: percent(533, 1920);
@@ -74,6 +74,7 @@
     display: flex;
     flex-direction: column;
     padding-top: rem(20);
+    padding-bottom: rem(30);
   }
   // .feedback__title
   &__title {
