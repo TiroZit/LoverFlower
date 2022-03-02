@@ -31,7 +31,7 @@
         top: 50%;
         display: block;
         @include adaptiveValue("width", 255, 96);
-        border: 1px solid $colorMagenta;
+        border: 1px solid var(--colorSkyMagenta);
       }
     }
   }
@@ -83,7 +83,7 @@
       display: inline-block;
       width: rem(4);
       height: rem(4);
-      background-color: $colorWhite;
+      background-color: var(--colorWhite);
       border-radius: 50%;
       margin-right: em(12,18);
     }

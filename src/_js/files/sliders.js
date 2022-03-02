@@ -22,9 +22,6 @@ EffectFade, Lazy, Manipulation
 // import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
 // import 'swiper/css';
-
-// Добавление классов слайдерам
-// swiper главному блоку, swiper-wrapper оболочке, swiper-slide для слайдов
 function bildSliders() {
 	//BildSlider
 	let sliders = document.querySelectorAll('[class*="__swiper"]:not(.swiper-wrapper)');
@@ -40,11 +37,9 @@ function bildSliders() {
 }
 // Инициализация слайдеров
 function initSliders() {
-	// Добавление классов слайдера
-	// при необходимости отключить
 	bildSliders();
-
 	// Перечень слайдеров
+	// Проверяем, есть ли слайдер на стронице
 	if (document.querySelector('.swiper')) {
 		new Swiper('.swiper', {
 			// Подключаем модули слайдера
@@ -103,10 +98,7 @@ function initSliders() {
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
-	// Добавление классов слайдера
-	// при необходимости отключить
 	bildSliders();
-
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
 	if (sliderScrollItems.length > 0) {
 		for (let index = 0; index < sliderScrollItems.length; index++) {

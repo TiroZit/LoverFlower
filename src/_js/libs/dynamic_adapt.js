@@ -32,7 +32,7 @@ DynamicAdapt.prototype.init = function () {
 	this.arraySort(this.оbjects);
 	// массив уникальных медиа-запросов
 	this.mediaQueries = Array.prototype.map.call(this.оbjects, function (item) {
-		return '(' + this.type + "-width: " + item.breakpoint + "em)," + item.breakpoint;
+		return '(' + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
 	}, this);
 	this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
 		return Array.prototype.indexOf.call(self, item) === index;

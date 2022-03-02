@@ -1,0 +1,25 @@
+section.contacts
+  .contacts__container
+    .contacts__gallery(data-text='instagram')
+      .contacts__gallery-item
+        img.lazy(src='img/instagram/1.jpg' alt='елка' width='160' height='160')
+      .contacts__gallery-item
+        img.lazy(src='img/instagram/2.jpg' alt='новогодний букет' width='160' height='160')
+      .contacts__gallery-item
+        img.lazy(data-src='img/instagram/3.jpg' alt='свечка' width='160' height='160')
+      .contacts__gallery-item
+        img.lazy(data-src='img/instagram/4.jpg' alt='новогодний букет' width='160' height='160')
+    .contacts__title-signature.title-signature our social networks
+    .contacts__socials.socials
+      a.socials__item(href="https://www.instagram.com/" aria-label='instagram' target='_blank')
+        svg.instagram(style=`fill: currentColor;`)
+          use(xlink:href=`img/icons/icons.svg#svg-instagram`)
+      a.socials__item(href="https://www.whatsapp.com/" aria-label='whatsapp' target='_blank')
+        svg.whatsapp(style=`fill: currentColor;`)
+          use(xlink:href=`img/icons/icons.svg#svg-whatsapp`)
+      a.socials__item(href="tel:+375291136969" aria-label='phone')
+        svg.phone-icon(style=`fill: currentColor;`)
+          use(xlink:href=`img/icons/icons.svg#svg-phone-icon`)
+  span.contacts__elipse_darkraspberry.elipse-blur.elipse-blur_darkraspberry
+  span.contacts__elipse_turquoise_1.elipse-blur.elipse-blur_turquoise
+  span.contacts__elipse_turquoise_2.elipse-blur.elipse-blur_turquoise

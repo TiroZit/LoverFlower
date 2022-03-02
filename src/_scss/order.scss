@@ -91,7 +91,7 @@
       font-size: rem(30);
       font-weight: 700;
       line-height: math.div(44, 30);
-      color: $colorMagenta;
+      color: var(--colorSkyMagenta);
     }
     &:nth-child(1){
       position: relative;
@@ -103,7 +103,7 @@
         left: 0;
         width: rem(65);
         height: rem(10);
-        background-color: $colorMagenta;
+        background-color: var(--colorSkyMagenta);
       }  
       @include media-breakpoint-down(tablet){
         @include adaptiveValue("margin-left", 350, 150, 992, 320);

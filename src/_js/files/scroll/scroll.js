@@ -1,7 +1,5 @@
 // Подключение функционала "Чертогов Фрилансера"
 import { isMobile, getHash } from "../functions.js";
-// Импорт класса наблюдателя.
-import { ScrollWatcher } from "../../libs/watcher.js";
 // Модуль прокрутки к блоку
 import { gotoBlock } from "./gotoblock.js";
 // Переменная контроля добавления события window scroll.
@@ -74,10 +72,9 @@ export function pageNavigation() {
 export function headerScroll() {
 	addWindowScrollEvent = true;
 	const header = document.querySelector('header.header');
-	const welcome = document.querySelector('.welcome').offsetHeight;
-	const headerShow = header.hasAttribute('data-scroll-show'); // Добавить
+	const headerShow = header.hasAttribute('data-scroll-show');
 	const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
-	const startPoint = header.dataset.scroll ? header.dataset.scroll : welcome;
+	const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
 	let scrollDirection = 0;
 	let timer;
 	document.addEventListener("windowScroll", function (e) {
@@ -88,11 +85,10 @@ export function headerScroll() {
 			if (headerShow) {
 				if (scrollTop > scrollDirection) {
 					// downscroll code
-					
-					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
+					header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
 				} else {
 					// upscroll code
-					// header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
 				}
 				timer = setTimeout(() => {
 					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
@@ -181,4 +177,3 @@ setTimeout(() => {
 		});
 	}
 }, 0);
-

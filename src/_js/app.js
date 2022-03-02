@@ -24,7 +24,7 @@ import * as flsFunctions from "./files/functions.js";
 
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
 /* (i) необходимо для корректного отображения webp из css  */
-// flsFunctions.isWebp();
+flsFunctions.isWebp();
 /* Добавление класса touch для HTML если браузер мобильный */
 // flsFunctions.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
@@ -42,35 +42,35 @@ import focusVisible from "focus-visible";
 
 /*
 Модуль работы со спойлерами
-Документация:
+Документация: https://template.fls.guru/template-docs/modul-spojlery.html
 Сниппет (HTML): spollers
 */
 // flsFunctions.spollers();
 
 /*
 Модуль работы с табами
-Документация:
+Документация: https://template.fls.guru/template-docs/modul-taby.html
 Сниппет (HTML): tabs
 */
 // flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
-Документация по работе в шаблоне:
+Документация: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сниппет (HTML): showmore
 */
 // flsFunctions.showMore();
 
 /*
 Попапы
-Документация по работе в шаблоне:
+Документация: https://template.fls.guru/template-docs/funkcional-popup.html
 Сниппет (HTML): pl
 */
 // import './libs/popup.js'
 
 /*
 Модуль параллакса мышью
-Документация по работе в шаблоне:
+Документация: 
 Сниппет (HTML): 
 */
 // import './libs/parallax-mouse.js'
@@ -80,17 +80,16 @@ import focusVisible from "focus-visible";
 // ========================================================================================================================================================================================================================================================
 import * as flsForms from "./files/forms/forms.js";
 
-/* Работа с полями формы: добавление классов, работа с placeholder. */
-// flsForms.formFieldsInit();
+/* Работа с полями формы */
+/* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
+// flsForms.formFieldsInit({ viewPass: false });
 
-/* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
-// flsForms.formSubmit(true);
+/* Oтправка формы */
+/* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
+// flsForms.formSubmit();
 
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();
-
-/* Модуль формы "показать пароль" */
-// flsForms.formViewpass();
 
 /* Модуль звездного рейтинга */
 // flsForms.formRating();
@@ -130,7 +129,7 @@ import "./files/forms/inputmask.js";
 // ========================================================================================================================================================================================================================================================
 /*
 Настройка подключения плагина слайдера Swiper и новых слайдеров выполняется в файле js/files/sliders.js
-Документация по работе в шаблоне:
+Документация по работе в шаблоне: https://template.fls.guru/template-docs/rabota-so-slajderom-swiper.html
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
@@ -149,13 +148,13 @@ import "./files/sliders.js";
 // import './files/scroll/simplebar.js';
 
 // Ленивая (отложенная) загрузка картинок
-// Документация по работе в шаблоне: В HTML добавляем img, video, audio, iframe но вместо src пишем data-src
+// Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-lenivaya-podgruzka-lazy-loading.html
 // Документация плагина: https://github.com/verlok/vanilla-lazyload
 // Сниппет(HTML):
 import './files/scroll/lazyload.js';
 
 // Наблюдатель за объектами c атрибутом data-watch
-// Документация по работе в шаблоне: js/libs/watcher.js
+// Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сниппет(HTML):
 // import './libs/watcher.js'
 
@@ -163,9 +162,11 @@ import './files/scroll/lazyload.js';
 import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
+// Документация: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
 // flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
+// Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
 flsScroll.headerScroll();
 
 // Функционал липкого блока
@@ -175,7 +176,7 @@ flsScroll.headerScroll();
 // Галерея ========================================================================================================================================================================================================================================================
 // ========================================================================================================================================================================================================================================================
 /*
-Документация по работе в шаблоне: https://www.lightgalleryjs.com/docs/
+Документация по работе в шаблоне: 
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
@@ -186,6 +187,7 @@ flsScroll.headerScroll();
 // ========================================================================================================================================================================================================================================================
 
 /* Динамический адаптив */
+// Документация: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
 import "./libs/dynamic_adapt.js";
 
 /* Форматирование чисел */

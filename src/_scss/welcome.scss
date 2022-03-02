@@ -100,6 +100,7 @@
   &__socials{
     align-items: center;
     width: fit-content;
+    gap: rem(20);
     margin-top: em(10);
     @include media-breakpoint-up(tablet){
       flex-direction: column;
@@ -155,31 +156,6 @@
           right: percent(8, 64);
         }
       }
-    }
-  }
-}
-.address{
-  &__title{
-    color: var(--colorTurquoise);
-    letter-spacing: 0.1em;
-  }
-  &__sub-title{
-    font-size: rem(10);
-    font-weight: 300;
-    line-height: math.div(15, 10);
-    color: var(--colorWhite);
-    margin-top: em(8);
-  }
-}
-.socials{
-  display: flex;
-  gap: rem(20);
-  &__item{
-    display: flex;
-    color: var(--colorTurquoise);
-    transition: all .3s ease 0s;
-    &:hover{
-      color: var(--colorDarkRaspberry);
     }
   }
 }

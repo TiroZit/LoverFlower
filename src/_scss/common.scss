@@ -28,6 +28,30 @@ h2{
 	opacity: 1;
 	visibility: visible;
 }
+.address{
+  &__title{
+    color: var(--colorTurquoise);
+    letter-spacing: 0.1em;
+  }
+  &__sub-title{
+    font-size: rem(10);
+    font-weight: 300;
+    line-height: math.div(15, 10);
+    color: var(--colorWhite);
+    margin-top: em(8);
+  }
+}
+.socials{
+  display: flex;
+  &__item{
+    display: flex;
+    color: var(--colorTurquoise);
+    transition: color .3s ease 0s;
+    &:hover{
+      color: var(--colorDarkRaspberry);
+    }
+  }
+}
 .overlay{
 	position: absolute;
 	left: 0;
@@ -113,24 +137,24 @@ h2{
   font-size: rem(12);
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: $colorWhite;
-  border: 0.5px solid $colorWhite;
+  color: var(--colorWhite);
+  border: 0.5px solid var(--colorWhite);
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
   @media (any-hover: hover){
     &:hover{
       border: 0.5px solid transparent;
-      color: $colorBlack;
+      color: var(--colorBlack);
       background-color: var(--colorTurquoise);
     }
   }
   &.focus-visible{
     border: 0.5px solid transparent;
-    outline: 0.5px solid $colorTurquoise;
+    outline: 0.5px solid var(--colorTurquoise);
   }
   &:active{
     transition: none;
-    background-color: $colorTurquoise;
+    background-color: var(--colorTurquoise);
     box-shadow: inset 0px 0px 10px #01281F;
   }
 }
@@ -159,7 +183,7 @@ h2{
   letter-spacing: 0.1em;
   text-decoration-line: underline !important;
   text-transform: uppercase;
-  color: $colorMagenta;
+  color: var(--colorSkyMagenta);
   padding: em(5,12);
   margin: em(-5,12);
 }
@@ -173,7 +197,7 @@ h2{
   align-items: center;
   font-size: rem(20);
   font-weight: 300;
-  color: $colorBlack;
+  color: var(--colorBlack);
   text-transform: uppercase;
   border-radius: 50%;
   width: rem(60);

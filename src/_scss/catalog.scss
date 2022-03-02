@@ -114,7 +114,7 @@
     font-weight: 700;
     max-width: rem(271);
     line-height: math.div(44, 30);
-    color: $colorTurquoise;
+    color: var(--colorTurquoise);
     margin-left: em(10,30);
     margin-bottom: em(10,30);
   }
@@ -130,7 +130,7 @@
       display: inline-block;
       width: rem(4);
       height: rem(4);
-      background-color: $colorWhite;
+      background-color: var(--colorWhite);
       border-radius: 50%;
       margin-right: em(12,18);
     }
