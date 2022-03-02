@@ -1,5 +1,5 @@
-extends _html/_base
-include _html/_mixins
+extends html/_base
+include html/_mixins
 block vars
 	- var lang = 'ru'
 	- var type = 'website'
@@ -19,8 +19,9 @@ block vars
 block content
 	.wrapper
 		.overlay
-		include _html/_header
+		include html/_header
 		main.page
+<<<<<<< HEAD
 			include _html/welcome
 			include _html/catalog
 			include _html/bouquets
@@ -30,3 +31,13 @@ block content
 			include _html/contacts
 		include _html/_footer
 	script(src="js/app.min.js")
+=======
+			include html/welcome
+			include html/catalog
+			include html/bouquets
+			include html/order
+			include html/occasion
+			include html/feedback
+			include html/contacts
+		include html/_footer
+>>>>>>> b9749cc21ccfb12db40ff7e8f59050fab1052625
