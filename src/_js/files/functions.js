@@ -400,9 +400,9 @@ export function tabs() {
 Сниппет (HTML): menu
 */
 export function menuInit() {
-	if (document.querySelector(".icon-menu")) {
+	if (document.querySelector(".burger")) {
 		document.addEventListener("click", function (e) {
-			if (bodyLockStatus && e.target.closest('.icon-menu')) {
+			if (bodyLockStatus && e.target.closest('.burger')) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
 			}
