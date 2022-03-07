@@ -770,6 +770,78 @@ h2 {
   display: none;
 }
 
+.footer {
+  background-color: var(--colorBlack);
+  padding-top: 1.875rem;
+  padding-bottom: 3.75rem;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.875rem;
+  text-transform: uppercase;
+}
+
+.footer__header {
+  flex: 0 1 15.25rem;
+}
+
+.footer__logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1.875rem;
+  margin-top: -2.1875rem;
+}
+
+.footer__title {
+  font-weight: 700;
+  color: var(--colorTurquoise);
+}
+
+.footer__title:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.footer__address:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.footer__subtitle {
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.footer__body {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.footer__list {
+  flex: 0 1 10rem;
+}
+
+.footer__item_title:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.footer__item_title:not(:first-child) {
+  margin-top: 1.25rem;
+}
+
+.footer__socials {
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.footer__socials > .socials__item {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .welcome {
   position: relative;
   min-height: 100vh;
