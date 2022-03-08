@@ -273,7 +273,7 @@ body {
      object-fit: contain;
 }
 
-a[href]:not(.view-catalog, .btn-turquoise) {
+a[href]:not(.view-catalog, .btn-turquoise, .logo) {
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
@@ -876,35 +876,26 @@ h2 {
   background: linear-gradient(180deg, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.jpg") bottom/cover no-repeat;
 }          .webp .welcome {            background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 10, 10, 0)), to(rgba(4, 10, 10, 0.8))), url("../img/flowers-bg.webp") bottom/cover no-repeat;            background: -o-linear-gradient(top, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.webp") bottom/cover no-repeat;            background: linear-gradient(180deg, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.webp") bottom/cover no-repeat          }                  .avif .welcome {            background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 10, 10, 0)), to(rgba(4, 10, 10, 0.8))), url("../img/flowers-bg.avif") bottom/cover no-repeat;            background: -o-linear-gradient(top, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.avif") bottom/cover no-repeat;            background: linear-gradient(180deg, rgba(4, 10, 10, 0) 0%, rgba(4, 10, 10, 0.8) 100%), url("../img/flowers-bg.avif") bottom/cover no-repeat          }        
 
-.welcome::before,
-.welcome::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  -webkit-filter: blur(100px);
-          filter: blur(100px);
-}
-
-.welcome::before {
+.welcome__elipse_turquoise {
   width: 18.6979166667%;
   height: 25.6770833333%;
   left: 8.3854166667%;
   top: 34.6354166667%;
-  background: #249479;
   -webkit-transform: rotate(41.6deg);
       -ms-transform: rotate(41.6deg);
           transform: rotate(41.6deg);
+  z-index: 0;
 }
 
-.welcome::after {
+.welcome__elipse_darkraspberry {
   width: 24.5833333333%;
   height: 10.9895833333%;
   top: 31.25%;
   right: 10.4166666667%;
-  background: #7D2253;
   -webkit-transform: rotate(-43.21deg);
       -ms-transform: rotate(-43.21deg);
           transform: rotate(-43.21deg);
+  z-index: 0;
 }
 
 .welcome__title-signature {
@@ -1032,34 +1023,24 @@ h2 {
   margin-top: 6.25rem;
 }
 
-.catalog::before,
-.catalog::after {
-  content: "";
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  z-index: -1;
-  -webkit-filter: blur(100px);
-          filter: blur(100px);
+.catalog__elipse_darkraspberry {
+  width: 44.1875rem;
+  height: 14.75rem;
+  left: -1.0416666667%;
+  top: 55.46875%;
   -webkit-transform: rotate(32.83deg);
       -ms-transform: rotate(32.83deg);
           transform: rotate(32.83deg);
 }
 
-.catalog::before {
-  width: 44.1875rem;
-  height: 14.75rem;
-  left: -1.0416666667%;
-  top: 55.46875%;
-  background: #7D2253;
-}
-
-.catalog::after {
+.catalog__elipse_turquoise {
   width: 54.9375rem;
   height: 14.375rem;
   top: 57.2916666667%;
   right: 5.2083333333%;
-  background: #249479;
+  -webkit-transform: rotate(32.83deg);
+      -ms-transform: rotate(32.83deg);
+          transform: rotate(32.83deg);
 }
 
 .catalog__items {
@@ -1155,6 +1136,10 @@ h2 {
   margin-top: 1.6666666667em;
 }
 
+.bouquets {
+  position: relative;
+}
+
 @supports (margin-top: clamp( 6.25rem , 3.7808641975rem  +  12.3456790123vw , 12.5rem )) {
   .bouquets {
     margin-top: clamp( 6.25rem , 3.7808641975rem  +  12.3456790123vw , 12.5rem );
@@ -1165,6 +1150,27 @@ h2 {
   .bouquets {
     margin-top: calc(6.25rem + 6.25 * (100vw - 20rem) / 50.625);
   }
+}
+
+.bouquets__elipse_turquoise {
+  width: 37.1875%;
+  height: 39.5833333333%;
+  left: 8.3854166667%;
+  top: 55.46875%;
+  -webkit-transform: rotate(32.6deg);
+      -ms-transform: rotate(32.6deg);
+          transform: rotate(32.6deg);
+  border-radius: 50%;
+}
+
+.bouquets__elipse_darkraspberry {
+  width: 29.7395833333%;
+  height: 20.625%;
+  top: 67.7083333333%;
+  left: 39.6354166667%;
+  -webkit-transform: rotate(-32.6deg);
+      -ms-transform: rotate(-32.6deg);
+          transform: rotate(-32.6deg);
 }
 
 .bouquets__title {
@@ -1424,6 +1430,7 @@ h2 {
 
 .occasion {
   position: relative;
+  z-index: 1;
 }
 
 @supports (margin-top: clamp( 6.25rem , 5.0154320988rem  +  6.1728395062vw , 9.375rem )) {
@@ -1438,18 +1445,11 @@ h2 {
   }
 }
 
-.occasion::after {
-  content: "";
-  display: block;
-  position: absolute;
+.occasion__elipse_darkraspberry {
   width: 18.4375%;
   height: 45.5%;
   bottom: 30%;
   right: 0;
-  z-index: -1;
-  background: #7D2253;
-  -webkit-filter: blur(100px);
-          filter: blur(100px);
   -webkit-transform: rotate(32.83deg);
       -ms-transform: rotate(32.83deg);
           transform: rotate(32.83deg);
@@ -1591,7 +1591,6 @@ h2 {
 
 .occasion__items {
   position: relative;
-  z-index: -1;
   display: grid;
   grid-template-columns: 15.9375rem 10rem 15.9375rem;
   gap: 1.875rem;
@@ -2554,6 +2553,10 @@ h2 {
     max-width: 22.1875rem;
   }
 
+  .occasion__container {
+    margin-bottom: 3.125rem;
+  }
+
   .occasion__text {
     max-width: 28.4375rem;
   }
@@ -2641,7 +2644,7 @@ h2 {
 }
 
 @media (any-hover: hover) {
-  a[href]:not(.view-catalog, .btn-turquoise):hover {
+  a[href]:not(.view-catalog, .btn-turquoise, .logo):hover {
     color: var(--colorSkyMagenta);
   }
 

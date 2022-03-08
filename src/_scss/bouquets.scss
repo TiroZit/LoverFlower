@@ -1,7 +1,23 @@
 .bouquets {
+  position: relative;
   @include adaptiveValue("margin-top", 200, 100);
   @include media-breakpoint-up(tablet){
     background: url("@img/bouquets-bg.jpg") top right no-repeat;
+  }
+  &__elipse_turquoise{
+    width: percent(714, 1920);
+    height: percent(760, 1920);
+    left: percent(161, 1920);
+    top: percent(1065, 1920);
+    transform: rotate(32.6deg);
+    border-radius: 50%;
+  }
+  &__elipse_darkraspberry{
+    width: percent(571, 1920);
+    height: percent(396, 1920);
+    top: percent(1300, 1920);
+    left: percent(761, 1920);
+    transform: rotate(-32.6deg);
   }
   // .bouquets__container
   &__container {

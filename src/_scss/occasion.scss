@@ -1,21 +1,19 @@
 .occasion {
   position: relative;
+  z-index: 1;
   @include adaptiveValue("margin-top", 150, 100);
-  &::after{
-    content:'';
-    display: block;
-    position: absolute;
+  &__elipse_darkraspberry{
     width: percent(354, 1920);
     height: percent(364, 800);
     bottom: 30%;
     right: 0;
-    z-index: -1;
-    background: #7D2253;
-    filter: blur(100px);
     transform: rotate(32.83deg);
   }
   // .occasion__container
   &__container {
+    @include media-breakpoint-down(mobile){
+      margin-bottom: rem(50);
+    }
   }
   // .occasion__title
   &__title {
@@ -123,7 +121,6 @@
   // .occasion__items
   &__items {
     position: relative;
-    z-index: -1;
     display: grid;
     grid-template-columns: rem(255) rem(160) rem(255);
     gap: rem(30);

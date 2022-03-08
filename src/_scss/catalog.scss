@@ -1,27 +1,19 @@
 .catalog{
   position: relative;
   margin-top: rem(100);
-  &::before,&::after{
-    content:'';
-    position: absolute;
-    transform-style: preserve-3d;
-    z-index: -1;
-    filter: blur(100px);
-    transform: rotate(32.83deg);
-  }
-  &::before{
+  &__elipse_darkraspberry{
     width: rem(707);
     height: rem(236);
     left: percent(-20, 1920);
     top: percent(1065, 1920);
-    background: #7D2253;
+    transform: rotate(32.83deg);
   }
-  &::after{
+  &__elipse_turquoise{
     width: rem(879);
     height: rem(230);
     top: percent(1100, 1920);
     right: percent(100, 1920);
-    background: #249479;
+    transform: rotate(32.83deg);
   }
   &__items{
     display: grid;
