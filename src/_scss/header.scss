@@ -121,25 +121,29 @@
 		}
 	}
 	&__item{
-		&:hover{
-			color: var(--colorTurquoise);
-		}
+		transition: border .3s;
 		@include media-breakpoint-up(tablet){
 			border-bottom: 1px solid transparent;
-			transition: border 0.3s ease 0s;	
-			&:hover{
-				border-bottom: 1px solid var(--colorTurquoise);
-			}	
+			@media (any-hover: hover){
+				&:hover{
+					border-bottom: 1px solid var(--colorTurquoise);
+				}
+			}
 		}
 		&_client{
-			display: none;
-			@media(max-width: $tablet){
-				display: block;
+			@include media-breakpoint-up(tablet){
+				display: none;
 			}
 		}
 	}
 	&__link{
 		padding: 5px 0;
+		transition: color .3s;
+		@media (any-hover: hover){
+			&:hover{
+				color: var(--colorTurquoise) !important;
+			}
+		}
 	}
 }
 .search-header{
@@ -180,24 +184,6 @@
 	}
 }
 
-.cart-btn{
-	position: relative;
-	&::after{
-		content:'5';
-		position: absolute;
-		top: percent(-5, 25);
-		right: percent(-9, 22);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: var(--colorBlack);
-		font-size: rem(12);
-		width: rem(16);
-		height: rem(16);
-		border-radius: 50%;
-		background-color: var(--colorTurquoise);
-	}
-}
 //Burger
 .menu-open .burger{
 	transform: translateX(200px);

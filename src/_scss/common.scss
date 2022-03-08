@@ -1,6 +1,21 @@
 // Заголовки, общие БЄМ блоки и проче...
 a{
-  transition: all 0.3s ease 0s;
+  &[href]:not(.view-catalog, .btn-turquoise){
+    transition: color .3s;
+    @media (any-hover: hover){
+      &:hover{
+        color: var(--colorSkyMagenta);
+      }
+    }
+  }
+  &.view-catalog{
+    transition: color .3s;
+    @media (any-hover: hover){
+      &:hover{
+        color: var(--colorTurquoise);
+      }
+    }
+  }
 }
 h1{
   font-weight: 400;
@@ -47,9 +62,6 @@ h2{
     display: flex;
     color: var(--colorTurquoise);
     transition: color .3s ease 0s;
-    &:hover{
-      color: var(--colorDarkRaspberry);
-    }
   }
 }
 .overlay{
@@ -122,16 +134,35 @@ h2{
   color: #000;
   background-color: var(--colorTurquoise);
   text-transform: uppercase;
-  transition: all 0.3s ease 0s;
+  transition: color 0.3s, background-color .3s;
   @media (any-hover: hover){
     &:hover{
       background-color: var(--colorDarkRaspberry);
+      color: var(--colorWhite) !important;
     }
 }  &:active{
     transition: none;
     background-color: var(--colorDarkRaspberry);
     box-shadow: inset 0px 0px 10px #1B000E;
   }
+}
+.cart-btn{
+	position: relative;
+	&::after{
+		content:'5';
+		position: absolute;
+		top: percent(-5, 25);
+		right: percent(-9, 22);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: var(--colorBlack);
+		font-size: rem(12);
+		width: rem(16);
+		height: rem(16);
+		border-radius: 50%;
+		background-color: var(--colorTurquoise);
+	}
 }
 .btn-cart{
   font-size: rem(12);
@@ -140,7 +171,7 @@ h2{
   color: var(--colorWhite);
   border: 0.5px solid var(--colorWhite);
   text-transform: uppercase;
-  transition: all 0.3s ease 0s;
+  transition: color 0.3s, background-color .3s, border .3s;
   @media (any-hover: hover){
     &:hover{
       border: 0.5px solid transparent;
@@ -154,6 +185,7 @@ h2{
   }
   &:active{
     transition: none;
+    border: none;
     background-color: var(--colorTurquoise);
     box-shadow: inset 0px 0px 10px #01281F;
   }

@@ -139,6 +139,12 @@
     @media(max-width: $tablet){
       display: none;
     }
+    transition: color .3s;
+    @media (any-hover: hover){
+      &:hover{
+        color: var(--colorSkyMagenta);
+      }
+    }
   }
   &__cart{
     margin-right: 5px;

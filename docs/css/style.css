@@ -273,10 +273,16 @@ body {
      object-fit: contain;
 }
 
-a {
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+a[href]:not(.view-catalog, .btn-turquoise) {
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+a.view-catalog {
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 h1 {
@@ -359,10 +365,6 @@ h2 {
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
-}
-
-.socials__item:hover {
-  color: var(--colorDarkRaspberry);
 }
 
 .overlay {
@@ -467,9 +469,9 @@ h2 {
   color: #000;
   background-color: var(--colorTurquoise);
   text-transform: uppercase;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  -o-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 .btn-turquoise:active {
@@ -481,6 +483,26 @@ h2 {
           box-shadow: inset 0px 0px 10px #1B000E;
 }
 
+.cart-btn {
+  position: relative;
+}
+
+.cart-btn::after {
+  content: "5";
+  position: absolute;
+  top: -20%;
+  right: -40.9090909091%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--colorBlack);
+  font-size: 0.75rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--colorTurquoise);
+}
+
 .btn-cart {
   font-size: 0.75rem;
   font-weight: 700;
@@ -488,9 +510,9 @@ h2 {
   color: var(--colorWhite);
   border: 0.5px solid var(--colorWhite);
   text-transform: uppercase;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: color 0.3s, background-color 0.3s, border 0.3s;
+  -o-transition: color 0.3s, background-color 0.3s, border 0.3s;
+  transition: color 0.3s, background-color 0.3s, border 0.3s;
 }
 
 .btn-cart.focus-visible {
@@ -502,6 +524,7 @@ h2 {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
+  border: none;
   background-color: var(--colorTurquoise);
   -webkit-box-shadow: inset 0px 0px 10px #01281F;
           box-shadow: inset 0px 0px 10px #01281F;
@@ -675,16 +698,17 @@ h2 {
   }
 }
 
-.menu__item:hover {
-  color: var(--colorTurquoise);
-}
-
-.menu__item_client {
-  display: none;
+.menu__item {
+  -webkit-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
 }
 
 .menu__link {
   padding: 5px 0;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .search-header {
@@ -751,26 +775,6 @@ h2 {
   width: 1.25rem;
   height: 1.25rem;
   background: url("../img/close.svg") no-repeat 50% 50%;
-}
-
-.cart-btn {
-  position: relative;
-}
-
-.cart-btn::after {
-  content: "5";
-  position: absolute;
-  top: -20%;
-  right: -40.9090909091%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--colorBlack);
-  font-size: 0.75rem;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: var(--colorTurquoise);
 }
 
 .menu-open .burger {
@@ -997,6 +1001,9 @@ h2 {
   padding: 12px 20px;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .welcome__call .phone2 {
@@ -1261,6 +1268,10 @@ h2 {
   z-index: 2;
   cursor: pointer;
   padding: 10px 5px;
+  color: var(--colorTurquoise);
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .bouquets-button-next {
@@ -1572,6 +1583,10 @@ h2 {
 .occasion__btn span {
   position: absolute;
   top: -2.1875rem;
+  color: var(--colorTurquoise);
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .occasion__items {
@@ -2034,13 +2049,10 @@ h2 {
 @media (min-width: 62em) {
   .menu__item {
     border-bottom: 1px solid transparent;
-    -webkit-transition: border 0.3s ease 0s;
-    -o-transition: border 0.3s ease 0s;
-    transition: border 0.3s ease 0s;
   }
 
-  .menu__item:hover {
-    border-bottom: 1px solid var(--colorTurquoise);
+  .menu__item_client {
+    display: none;
   }
 
   .footer {
@@ -2127,6 +2139,12 @@ h2 {
     -webkit-transform: rotate(21deg);
         -ms-transform: rotate(21deg);
             transform: rotate(21deg);
+  }
+}
+
+@media (min-width: 62em) and (any-hover: hover) {
+  .menu__item:hover {
+    border-bottom: 1px solid var(--colorTurquoise);
   }
 }
 
@@ -2258,10 +2276,6 @@ h2 {
     width: 6.25rem;
     height: 0.0625rem;
     background-color: #555555;
-  }
-
-  .menu__item_client {
-    display: block;
   }
 
   .burger {
@@ -2627,13 +2641,39 @@ h2 {
 }
 
 @media (any-hover: hover) {
+  a[href]:not(.view-catalog, .btn-turquoise):hover {
+    color: var(--colorSkyMagenta);
+  }
+
+  a.view-catalog:hover {
+    color: var(--colorTurquoise);
+  }
+
   .btn-turquoise:hover {
     background-color: var(--colorDarkRaspberry);
+    color: var(--colorWhite) !important;
   }
 
   .btn-cart:hover {
     border: 0.5px solid transparent;
     color: var(--colorBlack);
     background-color: var(--colorTurquoise);
+  }
+
+  .menu__link:hover {
+    color: var(--colorTurquoise) !important;
+  }
+
+  .welcome__call:hover {
+    color: var(--colorSkyMagenta);
+  }
+
+  .bouquets-button-prev:hover,
+  .bouquets-button-next:hover {
+    color: var(--colorSkyMagenta);
+  }
+
+  .occasion__btn:hover > span {
+    color: var(--colorDarkRaspberry);
   }
 }
