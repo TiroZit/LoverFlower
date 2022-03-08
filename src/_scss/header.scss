@@ -1,9 +1,12 @@
 .header{
 	&._header-scroll{
+		transform: translateY(-100px);
 	}
 	&._header-show{
 		position: fixed;
 		background-color: var(--colorBlack);
+		transform: translateY(0);
+		transition: transform .3s ease 0s;
 	}
 	&._header-show .header__phone{
 		display: block;
