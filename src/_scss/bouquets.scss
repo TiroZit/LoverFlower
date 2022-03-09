@@ -63,8 +63,9 @@
   @include adaptiveValue("margin-top", 80, 25);
   &__wrapper{
     margin: 0 auto;
+    padding-right: rem(20);
     @include media-breakpoint-up(laptop-xl){
-      max-width: rem(1110);
+      max-width: rem(1130);
     }
     @include media-breakpoint-down(laptop-xl){
       max-width: rem(735);
@@ -78,8 +79,8 @@
   }
   // .slider-bouquets__slide
   &__slide {
-    max-width: 350px !important;
     text-transform: uppercase;
+    width: rem(350) !important;
   }
   // .slider-bouquets__label
   &__label {
@@ -129,7 +130,7 @@
 }
 .bouquets-button-prev {
   @include media-breakpoint-up(laptop-xl){
-    left: -10px;
+    left: rem(-20);
   }
 }
 .bouquets-button-next {

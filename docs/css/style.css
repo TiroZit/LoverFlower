@@ -556,8 +556,8 @@ h2 {
 
 .relevance-label {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -2.3%;
+  right: -5%;
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -1235,11 +1235,12 @@ h2 {
 
 .slider-bouquets__wrapper {
   margin: 0 auto;
+  padding-right: 1.25rem;
 }
 
 .slider-bouquets__slide {
-  max-width: 350px !important;
   text-transform: uppercase;
+  width: 21.875rem !important;
 }
 
 .slider-bouquets__img-block {
@@ -2149,11 +2150,11 @@ h2 {
 
 @media (min-width: 75em) {
   .slider-bouquets__wrapper {
-    max-width: 69.375rem;
+    max-width: 70.625rem;
   }
 
   .bouquets-button-prev {
-    left: -10px;
+    left: -1.25rem;
   }
 }
 
