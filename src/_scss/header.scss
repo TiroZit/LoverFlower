@@ -20,6 +20,9 @@
 	&._header-show .header__cart{
 		display: block;
 	}
+	&._header-show .submenu{
+		display: block;
+	}
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -121,12 +124,17 @@
 		}
 	}
 	&__item{
-		transition: border .3s;
+		position: relative;
 		@include media-breakpoint-up(tablet){
-			border-bottom: 1px solid transparent;
+			min-height: rem(50);
+			display: flex;
+			align-items: center;
 			@media (any-hover: hover){
 				&:hover{
-					border-bottom: 1px solid var(--colorTurquoise);
+					& .submenu{
+						opacity: 1;
+						visibility: visible;
+					}
 				}
 			}
 		}
@@ -137,12 +145,43 @@
 		}
 	}
 	&__link{
-		padding: 5px 0;
-		transition: color .3s;
-		@media (any-hover: hover){
-			&:hover{
-				color: var(--colorTurquoise) !important;
+		@include media-breakpoint-up(tablet){
+			transition: color .3s, border .3s;
+			border-bottom: 1px solid transparent;
+			@media (any-hover: hover){
+				&:hover{
+					color: var(--colorTurquoise) !important;
+					border-bottom: 1px solid var(--colorTurquoise);
+				}
 			}
+		}
+	}
+}
+.submenu{
+	@include media-breakpoint-up(tablet){
+		display: none;
+		position: absolute;
+		top: rem(60);
+		left: rem(-20);
+		opacity: 0;
+		transition: opacity .7s, visibility .7s;
+		visibility: hidden;
+		background-color: rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(20px);
+		padding: rem(10) rem(20);
+		width: rem(260);
+	}
+	&__item{
+		@include media-breakpoint-up(tablet){
+			&:not(:last-child) {
+				margin-bottom: rem(4);
+			}	
+		}
+	}
+	&__link{
+		@include media-breakpoint-up(tablet){
+			display: block;
+			width: 100%;	
 		}
 	}
 }

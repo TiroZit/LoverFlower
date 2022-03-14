@@ -1,6 +1,6 @@
 // Заголовки, общие БЄМ блоки и проче...
 a{
-  &[href]:not(.view-catalog, .btn-turquoise, .logo){
+  &[href]:not(.view-catalog, .btn-turquoise, .logo, .menu__link){
     transition: color .3s;
     @media (any-hover: hover){
       &:hover{

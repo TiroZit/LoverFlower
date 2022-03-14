@@ -273,7 +273,7 @@ body {
      object-fit: contain;
 }
 
-a[href]:not(.view-catalog, .btn-turquoise, .logo) {
+a[href]:not(.view-catalog, .btn-turquoise, .logo, .menu__link) {
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
@@ -619,6 +619,10 @@ h2 {
   display: block;
 }
 
+.header._header-show .submenu {
+  display: block;
+}
+
 .header__container {
   display: flex;
   align-items: center;
@@ -699,16 +703,7 @@ h2 {
 }
 
 .menu__item {
-  -webkit-transition: border 0.3s;
-  -o-transition: border 0.3s;
-  transition: border 0.3s;
-}
-
-.menu__link {
-  padding: 5px 0;
-  -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
+  position: relative;
 }
 
 .search-header {
@@ -2061,11 +2056,46 @@ h2 {
 
 @media (min-width: 62em) {
   .menu__item {
-    border-bottom: 1px solid transparent;
+    min-height: 3.125rem;
+    display: flex;
+    align-items: center;
   }
 
   .menu__item_client {
     display: none;
+  }
+
+  .menu__link {
+    -webkit-transition: color 0.3s, border 0.3s;
+    -o-transition: color 0.3s, border 0.3s;
+    transition: color 0.3s, border 0.3s;
+    border-bottom: 1px solid transparent;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 3.75rem;
+    left: -1.25rem;
+    opacity: 0;
+    -webkit-transition: opacity 0.7s, visibility 0.7s;
+    -o-transition: opacity 0.7s, visibility 0.7s;
+    transition: opacity 0.7s, visibility 0.7s;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    padding: 0.625rem 1.25rem;
+    width: 16.25rem;
+  }
+
+  .submenu__item:not(:last-child) {
+    margin-bottom: 0.25rem;
+  }
+
+  .submenu__link {
+    display: block;
+    width: 100%;
   }
 
   .footer {
@@ -2156,7 +2186,13 @@ h2 {
 }
 
 @media (min-width: 62em) and (any-hover: hover) {
-  .menu__item:hover {
+  .menu__item:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu__link:hover {
+    color: var(--colorTurquoise) !important;
     border-bottom: 1px solid var(--colorTurquoise);
   }
 }
@@ -2662,7 +2698,7 @@ h2 {
 }
 
 @media (any-hover: hover) {
-  a[href]:not(.view-catalog, .btn-turquoise, .logo):hover {
+  a[href]:not(.view-catalog, .btn-turquoise, .logo, .menu__link):hover {
     color: var(--colorSkyMagenta);
   }
 
@@ -2679,10 +2715,6 @@ h2 {
     border: 0.5px solid transparent;
     color: var(--colorBlack);
     background-color: var(--colorTurquoise);
-  }
-
-  .menu__link:hover {
-    color: var(--colorTurquoise) !important;
   }
 
   .welcome__call:hover {
