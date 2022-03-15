@@ -1,0 +1,100 @@
+extends _html/_base
+include _html/_mixins
+block vars
+  - var lang = 'ru'
+  - var type = 'website'
+  - var title = 'Ошибка 404 | LoverFlower'
+  - var description = 'Цветочный магазин'
+  - var siteName = 'LoverFlower'
+  - var keywords = 'lover flower loverflower lf цветы магазин'
+  - var url = 'https://tirozit.github.io/LoverFlower/error-404.html'
+  - var imageLogo = 'https://tirozit.github.io/LoverFlower/img/flowers-bg.jpg'
+  - var typeImage = 'image/jpeg'
+  - var widthImage = '1200'
+  - var heightImage = '630'
+  - var favicon = 'img/favicons/favicon.png'
+  - var font = 'fonts/Oswald-Regular.woff2'
+  - var light = ''
+  - var dark = ''
+block content
+  .wrapper
+    .overlay
+    header.header._header-show
+      .header__container 
+        button.burger(type="button")
+          span
+        a.header__logo.logo(href="home.html" data-da=`.header__menu,${992/16},first`)
+          span.logo__l l
+          span.logo__f f
+        .header__title
+          |lover
+          br
+          |flower
+        nav.header__menu.menu
+          ul.menu__list
+            li.menu__item
+              a.menu__link(href='#') Каталог
+              ul.submenu
+                li.submenu__item 
+                  a.submenu__link(href='#') Популярное
+                li.submenu__item 
+                  a.submenu__link(href='#') Сборны букеты
+                li.submenu__item 
+                  a.submenu__link(href='#') монобукеты
+                li.submenu__item 
+                  a.submenu__link(href='#') розы
+                li.submenu__item 
+                  a.submenu__link(href='#') свадебные
+                li.submenu__item 
+                  a.submenu__link(href='#') Композиции из цветов к коробке
+                li.submenu__item 
+                  a.submenu__link(href='#') интерьерные композиции
+                li.submenu__item 
+                  a.submenu__link(href='#') осенние
+                li.submenu__item 
+                  a.submenu__link(href='#') индивидуальный букет
+                li.submenu__item 
+                  a.submenu__link(href='#') сухоцветы
+                li.submenu__item 
+                  a.submenu__link(href='#') горшечные
+                li.submenu__item 
+                  a.submenu__link(href='#') дополнительно
+            li.menu__item
+              a.menu__link(href='#') Доставка и оплата 
+            li.menu__item
+              a.menu__link(href='#') О нас
+            li.menu__item
+              a.menu__link(href='#') Контакты
+            li.menu__item
+              a.menu__link(href='#') FAQ
+            li.menu__item.menu__item_client
+              a.menu__link(href='#') для корпартивных клиентов
+        .header__search(data-da=`.header__menu,${992/16},0`)
+          form.search-header(action="#")
+            button.search-header__btn(type="submit")
+              +svg('search', '18', '18', 'currentColor', 'none')
+            input.search-header__input(type="search" placeholder='Введите свой запрос')
+        a.header__phone.phone(href="tel:+375291136969")
+          +svg('phone2', '18', '18', 'currentColor', 'none')
+          |+375 (29) 113-69-69
+        button.header__cart.cart-btn(type="button")
+          +svg('cart', '25', '22', 'currentColor', 'none')
+    main.page__error-404
+      span.error-404__elipse_darkblue_1.elipse-blur.elipse-blur_darkblue
+      .error-404__container
+        .error-404__title
+          div 4
+          div 0
+          div 4
+        .error-404__title-signature.title-signature
+          |lover
+          br
+          span flower
+        .error-404__block
+          div Ошибка 404
+          div Упс...Такой страницы нет
+          a.error-404__link(href='home.html') на главную
+      span.error-404__elipse_darkblue_2.elipse-blur.elipse-blur_darkblue
+      span.error-404__elipse_darkblue_3.elipse-blur.elipse-blur_darkblue
+    include _html/_footer
+  script(src="js/app.min.js")

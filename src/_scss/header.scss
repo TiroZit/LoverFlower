@@ -158,6 +158,9 @@
 	}
 }
 .submenu{
+	@include media-breakpoint-down(tablet){
+		display: none !important;
+	}
 	@include media-breakpoint-up(tablet){
 		display: none;
 		position: absolute;

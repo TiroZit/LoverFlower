@@ -22,6 +22,7 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 	--colorTurquoise: #43FFD2;
 	--colorDarkRaspberry: #7D2253;
 	--colorSkyMagenta: #CC6699;
+	--color-DarkBlue: #163D8F;
 	
 	--borderRadius: 20px;
 	
@@ -161,3 +162,4 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "404";

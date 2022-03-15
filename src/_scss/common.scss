@@ -118,7 +118,10 @@ h2{
     background: #249479;
   }
   &_darkraspberry{
-    background: #7D2253;
+    background: var(--colorDarkRaspberry);
+  }
+  &_darkblue{
+    background: var(--color-DarkBlue);
   }
 }
 .text{
