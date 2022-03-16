@@ -29,7 +29,7 @@
         top: 50%;
         display: block;
         @include adaptiveValue("width", 255, 96);
-        border: 1px solid var(--colorSkyMagenta);
+        border: 1px solid var(--color-skyMagenta);
       }
     }
   }
@@ -81,7 +81,7 @@
       display: inline-block;
       width: rem(4);
       height: rem(4);
-      background-color: var(--colorWhite);
+      background-color: var(--color-white);
       border-radius: 50%;
       margin-right: em(12,18);
     }
@@ -100,14 +100,14 @@
     @media (any-hover: hover){
       &:hover{
         &>span{
-          color: var(--colorDarkRaspberry);
+          color: var(--color-darkRaspberry);
         }
       }
     }
     span{
       position: absolute;
       top: rem(-35);
-      color: var(--colorTurquoise);
+      color: var(--color-turquoise);
       transition: color .3s;
       @include media-breakpoint-up(mobileSmall){
         left: rem(-35);

@@ -70,7 +70,7 @@
       left: 0;
       @include adaptiveValue("width", 350, 100);
       height: rem(1);
-      background-color: var(--colorTurquoise);
+      background-color: var(--color-turquoise);
     }
   }
   &__socials{

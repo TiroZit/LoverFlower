@@ -49,13 +49,13 @@
 }
 
 :root {
-  --colorBlack: #040A0A;
-  --colorBlackRGB: rgba(0, 0, 0, 0.2);
-  --colorWhite: #fff;
-  --colorTurquoise: #43FFD2;
-  --colorDarkRaspberry: #7D2253;
-  --colorSkyMagenta: #CC6699;
-  --color-DarkBlue: #163D8F;
+  --color-black: #040A0A;
+  --color-blackRGB: rgba(0, 0, 0, 0.2);
+  --color-white: #fff;
+  --color-turquoise: #43FFD2;
+  --color-darkRaspberry: #7D2253;
+  --color-skyMagenta: #CC6699;
+  --color-darkBlue: #163D8F;
   --borderRadius: 20px;
   --blur: 20px;
   --ffamilyOswald: "Oswald", sans-serif;
@@ -81,8 +81,8 @@ body {
 }
 
 body {
-  color: var(--colorWhite);
-  background-color: var(--colorBlack);
+  color: var(--color-white);
+  background-color: var(--color-black);
   line-height: 1;
   font-family: "Oswald", sans-serif;
   font-size: 0.875rem;
@@ -175,7 +175,7 @@ body {
   -webkit-transition: outline 0.1s ease 0s;
   -o-transition: outline 0.1s ease 0s;
   transition: outline 0.1s ease 0s;
-  outline: 0.1875rem solid var(--colorDarkRaspberry);
+  outline: 0.1875rem solid var(--color-darkRaspberry);
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -344,7 +344,7 @@ h2 {
 }
 
 .address__title {
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
   letter-spacing: 0.1em;
 }
 
@@ -352,7 +352,7 @@ h2 {
   font-size: 0.625rem;
   font-weight: 300;
   line-height: 1.5;
-  color: var(--colorWhite);
+  color: var(--color-white);
   margin-top: 0.5em;
 }
 
@@ -362,7 +362,7 @@ h2 {
 
 .socials__item {
   display: flex;
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -399,7 +399,7 @@ h2 {
 .phone {
   display: flex;
   align-items: center;
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
 }
 
 .logo {
@@ -442,11 +442,11 @@ h2 {
 }
 
 .elipse-blur_darkraspberry {
-  background: var(--colorDarkRaspberry);
+  background: var(--color-darkRaspberry);
 }
 
 .elipse-blur_darkblue {
-  background: var(--color-DarkBlue);
+  background: var(--color-darkBlue);
 }
 
 .text {
@@ -472,7 +472,7 @@ h2 {
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #000;
-  background-color: var(--colorTurquoise);
+  background-color: var(--color-turquoise);
   text-transform: uppercase;
   -webkit-transition: color 0.3s, background-color 0.3s;
   -o-transition: color 0.3s, background-color 0.3s;
@@ -483,7 +483,7 @@ h2 {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
-  background-color: var(--colorDarkRaspberry);
+  background-color: var(--color-darkRaspberry);
   -webkit-box-shadow: inset 0px 0px 10px #1B000E;
           box-shadow: inset 0px 0px 10px #1B000E;
 }
@@ -500,20 +500,20 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--colorBlack);
+  color: var(--color-black);
   font-size: 0.75rem;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: var(--colorTurquoise);
+  background-color: var(--color-turquoise);
 }
 
 .btn-cart {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: var(--colorWhite);
-  border: 0.5px solid var(--colorWhite);
+  color: var(--color-white);
+  border: 0.5px solid var(--color-white);
   text-transform: uppercase;
   -webkit-transition: color 0.3s, background-color 0.3s, border 0.3s;
   -o-transition: color 0.3s, background-color 0.3s, border 0.3s;
@@ -522,7 +522,7 @@ h2 {
 
 .btn-cart.focus-visible {
   border: 0.5px solid transparent;
-  outline: 0.5px solid var(--colorTurquoise);
+  outline: 0.5px solid var(--color-turquoise);
 }
 
 .btn-cart:active {
@@ -530,7 +530,7 @@ h2 {
   -o-transition: none;
   transition: none;
   border: none;
-  background-color: var(--colorTurquoise);
+  background-color: var(--color-turquoise);
   -webkit-box-shadow: inset 0px 0px 10px #01281F;
           box-shadow: inset 0px 0px 10px #01281F;
 }
@@ -554,7 +554,7 @@ h2 {
   -webkit-text-decoration-line: underline !important;
           text-decoration-line: underline !important;
   text-transform: uppercase;
-  color: var(--colorSkyMagenta);
+  color: var(--color-skyMagenta);
   padding: 0.4166666667em;
   margin: -0.4166666667em;
 }
@@ -569,7 +569,7 @@ h2 {
   align-items: center;
   font-size: 1.25rem;
   font-weight: 300;
-  color: var(--colorBlack);
+  color: var(--color-black);
   text-transform: uppercase;
   border-radius: 50%;
   width: 3.75rem;
@@ -601,7 +601,7 @@ h2 {
 
 .header._header-show {
   position: fixed;
-  background-color: var(--colorBlack);
+  background-color: var(--color-black);
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
@@ -789,7 +789,7 @@ h2 {
 }
 
 .footer {
-  background-color: var(--colorBlack);
+  background-color: var(--color-black);
 }
 
 .footer__container {
@@ -808,7 +808,7 @@ h2 {
 
 .footer__title {
   font-weight: 700;
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
 }
 
 .footer__title:not(:last-child) {
@@ -980,7 +980,7 @@ h2 {
   flex-direction: column;
   font-size: 1rem;
   letter-spacing: 0.1em;
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
 }
 
 .welcome__phone {
@@ -1087,7 +1087,7 @@ h2 {
   font-weight: 700;
   max-width: 16.9375rem;
   line-height: 1.4666666667;
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
   margin-left: 0.3333333333em;
   margin-bottom: 0.3333333333em;
 }
@@ -1127,7 +1127,7 @@ h2 {
   display: inline-block;
   width: 0.25rem;
   height: 0.25rem;
-  background-color: var(--colorWhite);
+  background-color: var(--color-white);
   border-radius: 50%;
   margin-right: 0.6666666667em;
 }
@@ -1274,7 +1274,7 @@ h2 {
   z-index: 2;
   cursor: pointer;
   padding: 10px 5px;
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
@@ -1400,7 +1400,7 @@ h2 {
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.4666666667;
-  color: var(--colorSkyMagenta);
+  color: var(--color-skyMagenta);
 }
 
 .order__item:nth-child(1) {
@@ -1415,7 +1415,7 @@ h2 {
   left: 0;
   width: 4.0625rem;
   height: 0.625rem;
-  background-color: var(--colorSkyMagenta);
+  background-color: var(--color-skyMagenta);
 }
 
 .order__item:nth-child(2) {
@@ -1478,7 +1478,7 @@ h2 {
   position: absolute;
   top: 50%;
   display: block;
-  border: 1px solid var(--colorSkyMagenta);
+  border: 1px solid var(--color-skyMagenta);
 }
 
 @supports (left: clamp( 0.0000000625rem , -2.4691357153rem  +  12.3456788889vw , 6.25rem )) {
@@ -1567,7 +1567,7 @@ h2 {
   display: inline-block;
   width: 0.25rem;
   height: 0.25rem;
-  background-color: var(--colorWhite);
+  background-color: var(--color-white);
   border-radius: 50%;
   margin-right: 0.6666666667em;
 }
@@ -1583,7 +1583,7 @@ h2 {
 .occasion__btn span {
   position: absolute;
   top: -2.1875rem;
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
@@ -1633,7 +1633,7 @@ h2 {
   display: block;
   width: 100%;
   height: 1px;
-  background-color: var(--colorTurquoise);
+  background-color: var(--color-turquoise);
   margin-bottom: 3.125rem;
 }
 
@@ -1700,7 +1700,7 @@ h2 {
 
 .form-feedback__agree-link {
   text-decoration: underline !important;
-  color: var(--colorSkyMagenta);
+  color: var(--color-skyMagenta);
 }
 
 .contacts {
@@ -1781,7 +1781,7 @@ h2 {
   top: 50%;
   left: 0;
   height: 0.0625rem;
-  background-color: var(--colorTurquoise);
+  background-color: var(--color-turquoise);
 }
 
 @supports (width: clamp( 6.25rem , 0.0771604938rem  +  30.8641975309vw , 21.875rem )) {
@@ -2003,7 +2003,7 @@ h2 {
 
 .error-404__title-signature {
   right: 0;
-  color: var(--color-DarkBlue);
+  color: var(--color-darkBlue);
   -webkit-transform: rotate(-14.17deg);
       -ms-transform: rotate(-14.17deg);
           transform: rotate(-14.17deg);
@@ -2043,8 +2043,8 @@ h2 {
 }
 
 .error-404__link {
-  color: var(--colorTurquoise) !important;
-  border-bottom: 1px solid var(--colorTurquoise);
+  color: var(--color-turquoise) !important;
+  border-bottom: 1px solid var(--color-turquoise);
 }
 
 @media (min-width: 70.625em) {
@@ -2410,13 +2410,13 @@ h2 {
   }
 
   .menu__link:hover {
-    color: var(--colorTurquoise) !important;
-    border-bottom: 1px solid var(--colorTurquoise);
+    color: var(--color-turquoise) !important;
+    border-bottom: 1px solid var(--color-turquoise);
   }
 
   .error-404__link:hover {
-    color: var(--colorSkyMagenta) !important;
-    border-bottom: 1px solid var(--colorSkyMagenta);
+    color: var(--color-skyMagenta) !important;
+    border-bottom: 1px solid var(--color-skyMagenta);
   }
 }
 
@@ -2581,7 +2581,7 @@ h2 {
     position: absolute;
     width: 100%;
     height: 1px;
-    background-color: var(--colorTurquoise);
+    background-color: var(--color-turquoise);
   }
 
   .burger::before {
@@ -2655,7 +2655,7 @@ h2 {
   }
 
   .welcome__phone {
-    color: var(--colorWhite);
+    color: var(--color-white);
     text-decoration: underline !important;
     margin: 0.625em 0 0 0;
   }
@@ -2930,34 +2930,34 @@ h2 {
 
 @media (any-hover: hover) {
   a[href]:not(.view-catalog, .btn-turquoise, .logo, .menu__link):hover {
-    color: var(--colorSkyMagenta);
+    color: var(--color-skyMagenta);
   }
 
   a.view-catalog:hover {
-    color: var(--colorTurquoise);
+    color: var(--color-turquoise);
   }
 
   .btn-turquoise:hover {
-    background-color: var(--colorDarkRaspberry);
-    color: var(--colorWhite) !important;
+    background-color: var(--color-darkRaspberry);
+    color: var(--color-white) !important;
   }
 
   .btn-cart:hover {
     border: 0.5px solid transparent;
-    color: var(--colorBlack);
-    background-color: var(--colorTurquoise);
+    color: var(--color-black);
+    background-color: var(--color-turquoise);
   }
 
   .welcome__call:hover {
-    color: var(--colorSkyMagenta);
+    color: var(--color-skyMagenta);
   }
 
   .bouquets-button-prev:hover,
   .bouquets-button-next:hover {
-    color: var(--colorSkyMagenta);
+    color: var(--color-skyMagenta);
   }
 
   .occasion__btn:hover > span {
-    color: var(--colorDarkRaspberry);
+    color: var(--color-darkRaspberry);
   }
 }

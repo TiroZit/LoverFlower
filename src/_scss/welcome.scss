@@ -108,7 +108,7 @@
     flex-direction: column;
     font-size: rem(16);
     letter-spacing: 0.1em;
-    color: var(--colorTurquoise);
+    color: var(--color-turquoise);
     @include media-breakpoint-up(tablet){
       align-items: end;
       margin-bottom: em(20);
@@ -117,7 +117,7 @@
   &__phone{
     margin-bottom: em(7);
     @media(max-width: $tablet){
-      color: var(--colorWhite);
+      color: var(--color-white);
       text-decoration: underline !important;
       margin: em(10) 0 0 0;
     }
@@ -136,7 +136,7 @@
     transition: color .3s;
     @media (any-hover: hover){
       &:hover{
-        color: var(--colorSkyMagenta);
+        color: var(--color-skyMagenta);
       }
     }
   }

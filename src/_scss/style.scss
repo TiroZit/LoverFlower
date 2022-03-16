@@ -16,13 +16,13 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 
 // Основные цвета
 :root{
-	--colorBlack: #040A0A;
-	--colorBlackRGB: rgba(0, 0, 0, 0.2);
-	--colorWhite: #fff;
-	--colorTurquoise: #43FFD2;
-	--colorDarkRaspberry: #7D2253;
-	--colorSkyMagenta: #CC6699;
-	--color-DarkBlue: #163D8F;
+	--color-black: #040A0A;
+	--color-blackRGB: rgba(0, 0, 0, 0.2);
+	--color-white: #fff;
+	--color-turquoise: #43FFD2;
+	--color-darkRaspberry: #7D2253;
+	--color-skyMagenta: #CC6699;
+	--color-darkBlue: #163D8F;
 	
 	--borderRadius: 20px;
 	
@@ -98,7 +98,7 @@ body {
 // Ограничивающий контейнер
 .js-focus-visible :focus-visible{
 	transition: outline .1s ease 0s;
-  outline: rem(3) solid var(--colorDarkRaspberry);
+  outline: rem(3) solid var(--color-darkRaspberry);
 }
 .js-focus-visible :focus:not(.focus-visible){
   outline: none

@@ -125,11 +125,11 @@
   z-index: 2;
   cursor: pointer;
   padding: 10px 5px;
-  color: var(--colorTurquoise);
+  color: var(--color-turquoise);
   transition: color .3s;
   @media (any-hover: hover){
     &:hover{
-      color: var(--colorSkyMagenta);
+      color: var(--color-skyMagenta);
     }
   }
   @include media-breakpoint-down(tablet){

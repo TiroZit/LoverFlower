@@ -4,7 +4,7 @@ a{
     transition: color .3s;
     @media (any-hover: hover){
       &:hover{
-        color: var(--colorSkyMagenta);
+        color: var(--color-skyMagenta);
       }
     }
   }
@@ -12,7 +12,7 @@ a{
     transition: color .3s;
     @media (any-hover: hover){
       &:hover{
-        color: var(--colorTurquoise);
+        color: var(--color-turquoise);
       }
     }
   }
@@ -45,14 +45,14 @@ h2{
 }
 .address{
   &__title{
-    color: var(--colorTurquoise);
+    color: var(--color-turquoise);
     letter-spacing: 0.1em;
   }
   &__sub-title{
     font-size: rem(10);
     font-weight: 300;
     line-height: math.div(15, 10);
-    color: var(--colorWhite);
+    color: var(--color-white);
     margin-top: em(8);
   }
 }
@@ -60,7 +60,7 @@ h2{
   display: flex;
   &__item{
     display: flex;
-    color: var(--colorTurquoise);
+    color: var(--color-turquoise);
     transition: color .3s ease 0s;
   }
 }
@@ -85,7 +85,7 @@ h2{
 .phone{
 	display: flex;
 	align-items: center;
-	color: var(--colorTurquoise);
+	color: var(--color-turquoise);
 }
 .logo{
   position: relative;
@@ -118,10 +118,10 @@ h2{
     background: #249479;
   }
   &_darkraspberry{
-    background: var(--colorDarkRaspberry);
+    background: var(--color-darkRaspberry);
   }
   &_darkblue{
-    background: var(--color-DarkBlue);
+    background: var(--color-darkBlue);
   }
 }
 .text{
@@ -135,17 +135,17 @@ h2{
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #000;
-  background-color: var(--colorTurquoise);
+  background-color: var(--color-turquoise);
   text-transform: uppercase;
   transition: color 0.3s, background-color .3s;
   @media (any-hover: hover){
     &:hover{
-      background-color: var(--colorDarkRaspberry);
-      color: var(--colorWhite) !important;
+      background-color: var(--color-darkRaspberry);
+      color: var(--color-white) !important;
     }
 }  &:active{
     transition: none;
-    background-color: var(--colorDarkRaspberry);
+    background-color: var(--color-darkRaspberry);
     box-shadow: inset 0px 0px 10px #1B000E;
   }
 }
@@ -159,37 +159,37 @@ h2{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: var(--colorBlack);
+		color: var(--color-black);
 		font-size: rem(12);
 		width: rem(16);
 		height: rem(16);
 		border-radius: 50%;
-		background-color: var(--colorTurquoise);
+		background-color: var(--color-turquoise);
 	}
 }
 .btn-cart{
   font-size: rem(12);
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: var(--colorWhite);
-  border: 0.5px solid var(--colorWhite);
+  color: var(--color-white);
+  border: 0.5px solid var(--color-white);
   text-transform: uppercase;
   transition: color 0.3s, background-color .3s, border .3s;
   @media (any-hover: hover){
     &:hover{
       border: 0.5px solid transparent;
-      color: var(--colorBlack);
-      background-color: var(--colorTurquoise);
+      color: var(--color-black);
+      background-color: var(--color-turquoise);
     }
   }
   &.focus-visible{
     border: 0.5px solid transparent;
-    outline: 0.5px solid var(--colorTurquoise);
+    outline: 0.5px solid var(--color-turquoise);
   }
   &:active{
     transition: none;
     border: none;
-    background-color: var(--colorTurquoise);
+    background-color: var(--color-turquoise);
     box-shadow: inset 0px 0px 10px #01281F;
   }
 }
@@ -218,7 +218,7 @@ h2{
   letter-spacing: 0.1em;
   text-decoration-line: underline !important;
   text-transform: uppercase;
-  color: var(--colorSkyMagenta);
+  color: var(--color-skyMagenta);
   padding: em(5,12);
   margin: em(-5,12);
 }
@@ -235,7 +235,7 @@ h2{
   align-items: center;
   font-size: rem(20);
   font-weight: 300;
-  color: var(--colorBlack);
+  color: var(--color-black);
   text-transform: uppercase;
   border-radius: 50%;
   width: rem(60);

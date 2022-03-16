@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--colorBlack);
+  background-color: var(--color-black);
   @include media-breakpoint-up(tablet){
     padding-top: rem(30);
     padding-bottom: rem(60);
@@ -35,7 +35,7 @@
   // .footer__title
   &__title {
     font-weight: 700;
-    color: var(--colorTurquoise);
+    color: var(--color-turquoise);
     &:not(:last-child) {
       margin-bottom: rem(10);
     }

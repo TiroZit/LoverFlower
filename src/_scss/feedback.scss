@@ -115,7 +115,7 @@
       display: block;
       width: 100%;
       height: 1px;
-      background-color: var(--colorTurquoise);
+      background-color: var(--color-turquoise);
       margin-bottom: rem(50);
       @include media-breakpoint-down(mobile){
         width: 50%;
@@ -172,6 +172,6 @@
   // .form-feedback__agree-link
   &__agree-link {
     text-decoration: underline !important;
-    color: var(--colorSkyMagenta);
+    color: var(--color-skyMagenta);
   }
 }

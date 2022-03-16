@@ -95,7 +95,7 @@
   &__title-signature {
     @include adaptiveValue("top", 250, 400);
     right: 0;
-    color: var(--color-DarkBlue);
+    color: var(--color-darkBlue);
     transform: rotate(-14.17deg);
   }
   // .404__block
@@ -109,14 +109,14 @@
   }
   // .404__link
   &__link {
-    color: var(--colorTurquoise) !important;
-    border-bottom: 1px solid var(--colorTurquoise);
+    color: var(--color-turquoise) !important;
+    border-bottom: 1px solid var(--color-turquoise);
     @include media-breakpoint-up(tablet){
       transition: color .3s, border .3s !important;
       @media (any-hover: hover){
         &:hover{
-          color: var(--colorSkyMagenta) !important;
-          border-bottom: 1px solid var(--colorSkyMagenta);
+          color: var(--color-skyMagenta) !important;
+          border-bottom: 1px solid var(--color-skyMagenta);
         }
       }
     }

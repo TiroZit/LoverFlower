@@ -4,7 +4,7 @@
 	}
 	&._header-show{
 		position: fixed;
-		background-color: var(--colorBlack);
+		background-color: var(--color-black);
 		transform: translateY(0);
 		transition: transform .3s ease 0s;
 	}
@@ -150,8 +150,8 @@
 			border-bottom: 1px solid transparent;
 			@media (any-hover: hover){
 				&:hover{
-					color: var(--colorTurquoise) !important;
-					border-bottom: 1px solid var(--colorTurquoise);
+					color: var(--color-turquoise) !important;
+					border-bottom: 1px solid var(--color-turquoise);
 				}
 			}
 		}
@@ -252,7 +252,7 @@
 			position: absolute;
 			width: 100%;
 			height: 1px;
-			background-color: var(--colorTurquoise);
+			background-color: var(--color-turquoise);
 		}
 		&::before {
 			top: 0px;
