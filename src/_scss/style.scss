@@ -23,6 +23,7 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 	--color-darkRaspberry: #7D2253;
 	--color-skyMagenta: #CC6699;
 	--color-darkBlue: #163D8F;
+	--color-gold: #C8A156;
 	
 	--borderRadius: 20px;
 	
@@ -162,4 +163,5 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "about";
 @import "404";

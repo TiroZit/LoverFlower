@@ -1,0 +1,158 @@
+.page__about{
+  position: relative;
+  padding-top: rem(105);
+  &::before,&::after{
+    content:'';
+    display: block;
+    position: absolute;
+    background: url(@img/about/flower-gold-bg.png) top/contain no-repeat;
+    pointer-events: none;
+  }
+  &::before{
+    @include adaptiveValue("top", 150, 130);
+    @include adaptiveValue("left", -400, -120);
+    @include adaptiveValue("width", 1035, 225);
+    @include adaptiveValue("height", 554, 240);
+    transform: rotate(16.72deg);
+  }
+  &::after{
+    @include adaptiveValue("top", 20, 135);
+    @include adaptiveValue("right", 0, -100);
+    @include adaptiveValue("width", 672, 268);
+    @include adaptiveValue("height", 494, 289);
+  }
+}
+.about{
+  &__flower-bg{
+    display: block;
+    position: absolute;
+    background: url(@img/about/flower-gold-bg.png) right/cover no-repeat;
+    bottom: 0;
+    z-index: -1;
+    @include adaptiveValue("right", -200, -60);
+    @include adaptiveValue("width", 735, 209);
+    @include adaptiveValue("height", 684, 222);
+    transform: matrix(-0.84, 0.54, 0.54, 0.84, 0, 0);
+    pointer-events: none;
+  }
+  &__container{
+    position: relative;
+  }
+  &__elipse_gold{
+    width: rem(290);
+    height: rem(235);
+    transform: rotate(-71.86deg);
+  }
+  &__elipse_gold_1{
+    top: rem(-80);
+    left: rem(-100);
+  }
+  &__elipse_gold_2{
+    top: rem(300);
+    right: rem(0);
+  }
+  &__elipse_gold_3{
+    top: rem(120);
+    left: rem(-50);
+    width: rem(230);
+    height: rem(155);
+  }
+  &__elipse_gold_4{
+    top: rem(-150);
+    left: rem(-50);
+    width: rem(205);
+    height: rem(436);
+  }
+  &__elipse_gold_5{
+    top: rem(-100);
+    right: rem(-50);
+    width: rem(354);
+    height: rem(364);
+  }
+  &__title{
+    @include adaptiveValue("font-size", 100, 40);
+    font-weight: 400;
+    line-height: math.div(110, 100);
+    letter-spacing: 0.02em;
+    @include adaptiveValue("padding-top", 50, 20);
+    @include adaptiveValue("padding-left", 95, 60);
+  }
+  &__wrapper{
+    padding-top: rem(100);
+    @include adaptiveValue("padding-left", 185, 10);
+  }
+  &__subtitle{
+    &_turquoise{
+      color: var(--color-turquoise);
+    }
+    &_line{
+      position: relative;
+      width: fit-content;
+      &::after{
+        content:'';
+        display: block;
+        position: absolute;
+        @include adaptiveValue("bottom", 30, 12);
+        @include adaptiveValue("right", -80, -25);
+        @include adaptiveValue("width", 60, 20);
+        height: rem(1);
+        background-color: var(--color-turquoise);
+      }
+    }
+  }
+  &__block{
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 100, 50);
+    }
+    &:last-child{
+      @include adaptiveValue("margin-bottom", 150, 80);
+    }
+  }
+  &__block-blur{
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    padding: rem(40) rem(20);
+    @include media-breakpoint-down(mobileSmall){
+      padding: rem(10);
+    }
+    border-radius: unset;
+    & p{
+      max-width: rem(662);
+    }
+  }
+  &__text{
+    @include adaptiveValue("font-size", 20, 14);
+    font-weight: 300;
+    line-height: 1.3;
+    margin-top: rem(20);
+    &_uppercase{
+      text-transform: uppercase;
+    }
+  }
+  &__block-title{
+    @include adaptiveValue("font-size", 20, 14);
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: rem(20);
+  }
+  &__list{
+    width: fit-content;
+    margin-top: rem(20);
+    margin-left: auto;
+  }
+  &__item{
+    @include adaptiveValue("font-size", 20, 16);
+    font-weight: 300;
+  }
+  &__floor{
+    @include adaptiveValue("margin-bottom", 200, 100);
+    & p{
+      @include adaptiveValue("max-width", 445, 182);
+    }
+  }
+  &__block-text{
+    @include adaptiveValue("margin-top", 40, 20);
+    @include adaptiveValue("padding-left", 190, 0);
+  }
+}

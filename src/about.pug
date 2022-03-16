@@ -1,0 +1,226 @@
+extends _html/_base
+include _html/_mixins
+block vars
+  - var lang = 'ru'
+  - var type = 'website'
+  - var title = 'О нас | LoverFlower'
+  - var description = 'Цветочный магазин'
+  - var siteName = 'LoverFlower'
+  - var keywords = 'lover flower loverflower lf цветы магазин'
+  - var url = 'https://tirozit.github.io/LoverFlower/error-404.html'
+  - var imageLogo = 'https://tirozit.github.io/LoverFlower/img/flowers-bg.jpg'
+  - var typeImage = 'image/jpeg'
+  - var widthImage = '1200'
+  - var heightImage = '630'
+  - var favicon = 'img/favicons/favicon.png'
+  - var font = 'fonts/Oswald-Regular.woff2'
+  - var light = ''
+  - var dark = ''
+block content
+  .wrapper
+    .overlay
+    header.header._header-show
+      .header__container 
+        button.burger(type="button")
+          span
+        a.header__logo.logo(href="home.html" data-da=`.header__menu,${992/16},first`)
+          span.logo__l l
+          span.logo__f f
+        .header__title
+          |lover
+          br
+          |flower
+        nav.header__menu.menu
+          ul.menu__list
+            li.menu__item
+              a.menu__link(href='#') Каталог
+              ul.submenu
+                li.submenu__item 
+                  a.submenu__link(href='#') Популярное
+                li.submenu__item 
+                  a.submenu__link(href='#') Сборны букеты
+                li.submenu__item 
+                  a.submenu__link(href='#') монобукеты
+                li.submenu__item 
+                  a.submenu__link(href='#') розы
+                li.submenu__item 
+                  a.submenu__link(href='#') свадебные
+                li.submenu__item 
+                  a.submenu__link(href='#') Композиции из цветов к коробке
+                li.submenu__item 
+                  a.submenu__link(href='#') интерьерные композиции
+                li.submenu__item 
+                  a.submenu__link(href='#') осенние
+                li.submenu__item 
+                  a.submenu__link(href='#') индивидуальный букет
+                li.submenu__item 
+                  a.submenu__link(href='#') сухоцветы
+                li.submenu__item 
+                  a.submenu__link(href='#') горшечные
+                li.submenu__item 
+                  a.submenu__link(href='#') дополнительно
+            li.menu__item
+              a.menu__link(href='#') Доставка и оплата 
+            li.menu__item
+              a.menu__link(href='#') О нас
+            li.menu__item
+              a.menu__link(href='#') Контакты
+            li.menu__item
+              a.menu__link(href='#') FAQ
+            li.menu__item.menu__item_client
+              a.menu__link(href='#') для корпартивных клиентов
+        .header__search(data-da=`.header__menu,${992/16},0`)
+          form.search-header(action="#")
+            button.search-header__btn(type="submit")
+              +svg('search', '18', '18', 'currentColor', 'none')
+            input.search-header__input(type="search" placeholder='Введите свой запрос')
+        a.header__phone.phone(href="tel:+375291136969")
+          +svg('phone2', '18', '18', 'currentColor', 'none')
+          |+375 (29) 113-69-69
+        button.header__cart.cart-btn(type="button")
+          +svg('cart', '25', '22', 'currentColor', 'none')
+    main.page__about
+      span.about__elipse_gold_1.about__elipse_gold.elipse-blur.elipse-blur_gold
+      .about__container
+        .about__crumbs.crumbs
+          a.crumbs__link(href="home.html") Главная
+          span  / 
+          a.crumbs__link(href="about.html") о нас
+        h1.about__title о нас
+        span.about__elipse_gold_2.about__elipse_gold.elipse-blur.elipse-blur_gold
+        .about__wrapper
+          .about__block
+            h2.about__subtitle.about__subtitle_line.about__subtitle_turquoise.title_60
+              |Lover
+              br
+              |flower
+            .about__block-blur.bg-blur
+              h3.about__block-title молодая команда разных людей с одинаковыми ценностями.
+              p.about__text
+                |Мы считаем, что удовольствие от качества длится дольше, чем удовольствие 
+                |от низкой цены. И поэтому в создание нашей букетерии мы вложили все, 
+                |чем располагаем: душу, сердце, время и мечты! Мы готовы обещать вам только то, что можем сделать. А делаем мы только самое качественное, самое интересное 
+                |и обязательно уникальное. Мы всегда честны со своими клиентами во всем – 
+                |в нашем каталоге только те букеты, которые вы действительно сможете купить.
+              span.about__elipse_gold_3.about__elipse_gold.elipse-blur.elipse-blur_gold
+          .about__block 
+            h2.about__subtitle.about__subtitle_turquoise.title_60 гарантии
+            p.about__text.about__text_uppercase Каждый цветок уникален и чтобы вы были уверены в качестве, мы пришлем вам фотографию именно вашего букета до его отправки получателю. Вся предоставленная Вами информация конфиденциальна и будет известна только нам и курьеру для осуществления доставки.
+          .about__block 
+            h2.about__subtitle.about__subtitle_turquoise.title_60
+              |Заказ букетов на 
+              br
+              |сайте компании 
+              br
+              |Lower Flower – это:
+            ul.about__list.list 
+              li.about__item.list__item выбор оттенков и сортов цветков в любое время года;
+              li.about__item.list__item отправка фото готовой композиции перед отправкой;
+              li.about__item.list__item возможность заказать цветы с доставкой в течение часа;
+              li.about__item.list__item выгодные цены – на сайте только те варианты, что Вы сможете купить;
+              li.about__item.list__item полная конфиденциальность по заказу;
+              li.about__item.list__item мы подбираем открытку, воздушные шар, подарок по Вашему желанию;
+              li.about__item.list__item в нашем уютном цветочном магазине цветы, которые приятно дарить.
+        .about__floor
+          h2.about__subtitle.title_60
+            |Природная гармония цвета, неповторимость бутонов 
+            br
+            |и Ваши чувства 
+            br
+            |в нежных лепестках 
+            br
+            |не оставят никого равнодушным.
+          .about__block-text
+            p.about__text.about__text_uppercase Вы выбираете и заказываете цветочный сюрприз, а мы вкладываем в него душу!
+      .about__flower-bg
+    footer.footer
+      span.about__elipse_gold_4.elipse-blur.elipse-blur_gold
+      span.about__elipse_gold_5.elipse-blur.elipse-blur_gold
+      .footer__container
+        .footer__header 
+          a.footer__logo.logo(href="home.html")
+            span.logo__l l
+            span.logo__f f
+          .footer__requisites(data-da=`.footer__container,${992/16},last`)
+            .footer__title реквизиты
+            address.footer__address.footer__subtitle ООО «Ловефлове» 220035, Республика Беларусь, г. Минск, ул. Тимирязева д. 67, комн. 112 (пом.11) УНП 193263781, р/с BY55MTBK30120001093300096372 ЗАО «МТБанк», БИК MTBKBY22 220007, г. Минск, улица Толстого
+        .footer__body 
+          ul.footer__list 
+            li.footer__item.footer__item_title 
+              a.footer__title(href="#") Каталог
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Популярное
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Сухоцветы
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Букеты роз
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Композиции из цветов
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Индивидуальный букет
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Букет на праздник
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Упаковка подарков
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Шары
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Открытки
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Конверты
+          ul.footer__list 
+            li.footer__item.footer__item_title 
+              a.footer__title(href="#") Букет
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для девушки
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для мужчины
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для жены
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для мамы
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для коллеги
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для начальника
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для дочки
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для детей
+            li.footer__item.footer__item_subtitle 
+              a.footer__subtitle(href="#") Для женщины
+          ul.footer__list 
+            li.footer__item.footer__item_title 
+              a.footer__title(href="#") Доставка и оплата 
+            li.footer__item.footer__item_title 
+              a.footer__title(href="#") О нас
+            li.footer__item.footer__item_title 
+              a.footer__title(href="#") FAQ
+            li.footer__item.footer__item_title 
+              a.footer__title(href="#") Контакты
+            li.footer__item.footer__item_title 
+              a.footer__title(href="#") для корпоративных клиентов
+        address.footer__contacts 
+          .footer__address.address
+            a.address__title(href='mailto:zakaz@loverflower.by') zakaz@loverflower.by
+            .address__sub-title Доставка 24/7 по договоренности с оператором
+          .footer__address.address 
+            a.address__title(href='https://goo.gl/maps/GNPbidQCLpQMcjcJ8' target='_blank') ул. Тимирязева 67
+            .address__sub-title 
+              |10:00 до 21:00
+              br
+              |без выходных
+          .footer__address.address
+            a.address__title(href='tel:+375291136969') +375 (29) 113-69-69
+            .address__sub-title прием звонков круглосуточно
+          .footer__socials.socials
+            a.socials__item(href="https://www.instagram.com/" aria-label='instagram' target='_blank')
+              svg.instagram(style=`fill: currentColor;` aria-hidden)
+                use(xlink:href=`img/icons/icons.svg#svg-instagram`)
+            a.socials__item(href="https://www.whatsapp.com/" aria-label='whatsapp' target='_blank')
+              svg.whatsapp(style=`fill: currentColor;` aria-hidden)
+                use(xlink:href=`img/icons/icons.svg#svg-whatsapp`)
+            a.socials__item(href="tel:+375291136969" aria-label='phone')
+              svg.phone-icon(style=`fill: currentColor;` aria-hidden)
+                use(xlink:href=`img/icons/icons.svg#svg-phone-icon`)
+  script(src="js/app.min.js")

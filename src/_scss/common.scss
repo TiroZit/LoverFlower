@@ -17,18 +17,35 @@ a{
     }
   }
 }
-h1{
-  font-weight: 400;
-}
 h1,h2{
   font-family: var(--ffamilyCormorant);
   text-transform: uppercase;
 }
 h2{
-  @include adaptiveValue("font-size", 100, 40);
-  font-weight: 400;
-  line-height: math.div(110, 100);
   letter-spacing: 0.02em;
+}
+.title_100{
+  @include adaptiveValue("font-size", 100, 40);
+  line-height: math.div(110, 100);
+}
+.title_60{
+  @include adaptiveValue("font-size", 60, 20);
+  line-height: math.div(64, 60);
+}
+.list{
+  &__item{
+    display: flex;
+    align-items: center;
+    &::before{
+      content:'';
+      display: inline-block;
+      width: rem(4);
+      height: rem(4);
+      background-color: var(--color-white);
+      border-radius: 50%;
+      margin-right: em(12,18);
+    }
+  }
 }
 .title-signature{
   position: absolute;
@@ -122,6 +139,9 @@ h2{
   }
   &_darkblue{
     background: var(--color-darkBlue);
+  }
+  &_gold{
+    background: var(--color-gold);
   }
 }
 .text{
@@ -246,5 +266,12 @@ h2{
   }
   &_sale{
     background-color: #31985A;
+  }
+}
+.crumbs{
+  text-transform: uppercase;
+  font-size: rem(12);
+  & span{
+    user-select: none;
   }
 }

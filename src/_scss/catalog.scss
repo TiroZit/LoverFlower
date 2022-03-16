@@ -113,19 +113,8 @@
   &__list{
   }
   &__item{
-    display: flex;
-    align-items: center;
     @include adaptiveValue("font-size", 18, 14);
     line-height: math.div(27, 18);
-    &::before{
-      content:'';
-      display: inline-block;
-      width: rem(4);
-      height: rem(4);
-      background-color: var(--color-white);
-      border-radius: 50%;
-      margin-right: em(12,18);
-    }
     @include media-breakpoint-down(tablet){
       justify-content: center;
     }
