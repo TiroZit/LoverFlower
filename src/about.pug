@@ -7,7 +7,7 @@ block vars
   - var description = 'Цветочный магазин'
   - var siteName = 'LoverFlower'
   - var keywords = 'lover flower loverflower lf цветы магазин'
-  - var url = 'https://tirozit.github.io/LoverFlower/error-404.html'
+  - var url = 'https://tirozit.github.io/LoverFlower/about.html'
   - var imageLogo = 'https://tirozit.github.io/LoverFlower/img/flowers-bg.jpg'
   - var typeImage = 'image/jpeg'
   - var widthImage = '1200'
@@ -81,11 +81,8 @@ block content
           +svg('cart', '25', '22', 'currentColor', 'none')
     main.page__about
       span.about__elipse_gold_1.about__elipse_gold.elipse-blur.elipse-blur_gold
+      include _html/about/crumbs_about
       .about__container
-        .about__crumbs.crumbs
-          a.crumbs__link(href="home.html") Главная
-          span  / 
-          a.crumbs__link(href="about.html") о нас
         h1.about__title о нас
         span.about__elipse_gold_2.about__elipse_gold.elipse-blur.elipse-blur_gold
         .about__wrapper

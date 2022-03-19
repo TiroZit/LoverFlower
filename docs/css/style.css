@@ -1887,6 +1887,10 @@ h2 {
           transform: rotate(32deg);
 }
 
+.page__contacts {
+  padding-top: 6.5625rem;
+}
+
 .page__about {
   position: relative;
   padding-top: 6.5625rem;

@@ -1,0 +1,27 @@
+extends _html/_base
+include _html/_mixins
+block vars
+  - var lang = 'ru'
+  - var type = 'website'
+  - var title = 'Контакты | LoverFlower'
+  - var description = 'Цветочный магазин'
+  - var siteName = 'LoverFlower'
+  - var keywords = 'lover flower loverflower lf цветы магазин'
+  - var url = 'https://tirozit.github.io/LoverFlower/contacts.html'
+  - var imageLogo = 'https://tirozit.github.io/LoverFlower/img/flowers-bg.jpg'
+  - var typeImage = 'image/jpeg'
+  - var widthImage = '1200'
+  - var heightImage = '630'
+  - var favicon = 'img/favicons/favicon.png'
+  - var font = 'fonts/Oswald-Regular.woff2'
+  - var light = ''
+  - var dark = ''
+block content
+  .wrapper
+    .overlay
+    include _html/_header
+    main.page__contacts
+      include _html/contacts/crumbs_contacts
+      include _html/contacts/contacts
+    include _html/_footer
+  script(src="js/app.min.js")
